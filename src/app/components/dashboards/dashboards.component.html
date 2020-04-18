@@ -1,100 +1,80 @@
-<div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="25" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card>
-            <mat-card-content>
-                <div class="d-flex no-block">
-                    <div class="m-r-10 no-shrink">
-                        <button mat-fab mat-card-icon class="shadow-none bg-inverse  bg-success">
-                      <mat-icon>account_circle</mat-icon>
-                  </button>
-                    </div>
-                    <div>
-                        <h3 class="m-0">30</h3>
-                        <h6 class="text-muted m-0">Novos clientes</h6>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div fxFlex.gt-sm="25" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card>
-            <mat-card-content>
-                <div class="d-flex no-block">
-                    <div class="m-r-10 no-shrink">
-                        <button mat-fab color="warn" mat-card-icon class="shadow-none  bg-warning">
-                      <mat-icon>local_mall</mat-icon>
-                  </button>
-                    </div>
-                    <div>
-                        <h3 class="m-0">2408</h3>
-                        <h6 class="text-muted m-0">Novas vendas</h6>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div fxFlex.gt-sm="25" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card>
-            <mat-card-content>
-                <div class="d-flex no-block">
-                    <div class="m-r-10 no-shrink">
-                        <button mat-fab color="accent" mat-card-icon class="shadow-none">
-                      <mat-icon>stars</mat-icon>
-                  </button>
-                    </div>
-                    <div>
-                        <h3 class="m-0">150</h3>
-                        <h6 class="text-muted m-0">Novas localidades</h6>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div fxFlex.gt-sm="25" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card>
-            <mat-card-content>
-                <div class="d-flex no-block">
-                    <div class="m-r-10 no-shrink">
-                        <button mat-fab color="warn" mat-card-icon class="shadow-none bg-danger">
-                      <mat-icon>content_paste</mat-icon>
-                  </button>
-                    </div>
-                    <div>
-                        <h3 class="m-0">159</h3>
-                        <h6 class="text-muted m-0">Novos questionários</h6>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
+<div class="card-group">
+    <mat-card>
+        <mat-card-content>
+            <mat-icon class="text-info">account_circle</mat-icon>
+            <h3 class="m-0">386</h3>
+            <h5 class="text-muted m-t-0 m-b-10">Novos clientes</h5>
+            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-content>
+            <mat-icon class="text-danger">local_mall</mat-icon>
+            <h3 class="m-0">1386</h3>
+            <h5 class="text-muted m-t-0 m-b-10">Novos lugares para viajar</h5>
+            <mat-progress-bar color="warn" mode="determinate" value="60"></mat-progress-bar>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-content>
+            <mat-icon class="text-purple">stars</mat-icon>
+            <h3 class="m-0">986</h3>
+            <h5 class="text-muted m-t-0 m-b-10">Novas localidades</h5>
+            <mat-progress-bar color="accent" mode="determinate" value="80"></mat-progress-bar>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-content>
+            <!-- column -->
+            <mat-icon class="text-info">content_paste</mat-icon>
+            <h3 class="m-0">786</h3>
+            <h5 class="text-muted m-t-0  m-b-10">Novas vendas de seguro</h5>
+            <mat-progress-bar mode="indeterminate" value="40"></mat-progress-bar>
+        </mat-card-content>
+    </mat-card>
 </div>
 <div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card>
-            <mat-card-content>
-                <mat-card-title>Visão geral de vendas</mat-card-title>
-                <mat-card-subtitle>Orçamentos x vendas</mat-card-subtitle>
-                <div class="barchrt" style="height:360px;">
-                    <x-chartist class="" [data]="barChart1.data" [type]="barChart1.type" [options]="barChart1.options" [responsiveOptions]="barChart1.responsiveOptions" [events]="barChart1.events"> </x-chartist>
-                </div>
-                <ul class="list-inline text-center">
-                    <li>
-                        <h6 class="text-muted text-success m-0"><i class="fa fa-circle font-10 m-r-10 "></i>Ample</h6>
-                    </li>
-                    <li>
-                        <h6 class="text-muted  text-info  m-0"><i class="fa fa-circle font-10 m-r-10"></i>Pixel</h6>
-                    </li>
-                </ul>
-            </mat-card-content>
-        </mat-card>
+    <div fxFlex.gt-md="33.33" fxFlex.gt-xs="100" fxFlex="100">
+        <div fxLayout="row" fxLayoutWrap="wrap">
+            <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                <mat-card class="bg-success">
+                    <mat-card-content>
+                        <div class="d-flex p-t-20 p-b-20 no-block align-items-center">
+                            <div class="stats">
+                                <h3 class="text-white m-0">Vendas</h3>
+                                <h6 class="text-white m-t-0">Abril de 2020</h6>
+                                <h1 class="text-white m-0">456</h1>
+                            </div>
+                            <div class="spark-count ml-auto"></div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutWrap="wrap">
+            <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+                <mat-card class="bg-purple">
+                    <mat-card-content>
+                        <div class="d-flex p-t-20 p-b-20 no-block align-items-center">
+                            <div class="stats">
+                                <h3 class="text-white m-0">Compra</h3>
+                                <h6 class="text-white m-t-0">Abril de 2020</h6>
+                                <h1 class="text-white m-0">350</h1>
+                            </div>
+                            <div class="spark-count ml-auto"></div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
     </div>
-    <div fxFlex.gt-lg="25" fxFlex.gt-md="40" fxFlex.gt-xs="100" fxFlex="100">
+    <div fxFlex.gt-md="33.33" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
                 <mat-card-title>Nossos visitantes</mat-card-title>
                 <mat-card-subtitle>Diferentes dispositivos usados para visitar</mat-card-subtitle>
-                <div class="piechart">
-                    <x-chartist class="" [data]="donuteChart1.data" [type]="donuteChart1.type" [options]="donuteChart1.options" [responsiveOptions]="donuteChart1.responsiveOptions" [events]="donuteChart1.events"> </x-chartist>
+                <div class="text-center">
+                    <canvas baseChart class="m-auto" width="230" height="230" [data]="doughnutChartData" [labels]="doughnutChartLabels" [legend]="doughnutChartLegend" [options]="doughnutChartOptions" [chartType]="doughnutChartType" [colors]="[{backgroundColor: ['#1976d2', '#26dad2', '#dadada']}]"></canvas>
                 </div>
             </mat-card-content>
             <hr>
@@ -113,82 +93,14 @@
             </mat-card-content>
         </mat-card>
     </div>
-</div>
-<div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card class="bg-info">
-            <mat-card-content>
-                <div class="d-flex no-block align-items-center">
-                    <div class="stats">
-                        <h3 class="text-white m-0">Compra</h3>
-                        <h6 class="text-white m-t-0">Abril 2020</h6>
-                        <h1 class="text-white m-0">557</h1>
-                    </div>
-                    <div class="spark-count ml-auto"></div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card class="bg-purple">
-            <mat-card-content>
-                <div class="d-flex no-block align-items-center">
-                    <div class="stats">
-                        <h3 class="text-white m-0">Despesa</h3>
-                        <h6 class="text-white m-t-0">Abril 2020</h6>
-                        <h1 class="text-white m-0">290</h1>
-                    </div>
-                    <div class="spark-count ml-auto"></div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card class="bg-success">
-            <mat-card-content>
-                <div class="d-flex no-block align-items-center">
-                    <div class="stats">
-                        <h3 class="text-white m-0">Renda</h3>
-                        <h6 class="text-white m-t-0">Abril 2020</h6>
-                        <h1 class="text-white m-0">267</h1>
-                    </div>
-                    <div class="spark-count ml-auto"></div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-</div>
-<div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-lg="25" fxFlex.gt-md="40" fxFlex.gt-xs="100" fxFlex="100">
-        <mat-card class="oh">
-            <img mat-card-image src="assets/images/big/img1.jpg" alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    O Shiba Inu é a menor das seis raças de spitz originais e distintas do Japão. Um cão pequeno e ágil que lida muito bem com terrenos montanhosos.
-                </p>
-                <mat-card-actions>
-                    <button mat-raised-button color="accent">Gostei</button>
-                    <button mat-button>Compartilhar</button>
-                </mat-card-actions>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
+    <div fxFlex.gt-md="33.33" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
-                <mat-card-title>Campanha Newsletter</mat-card-title>
-                <mat-card-subtitle>Visão geral da campanha da Newsletter</mat-card-subtitle>
-                <div class="linearea" style="height:360px;">
-                    <x-chartist class="" [data]="lineChart1.data" [type]="lineChart1.type" [options]="lineChart1.options" [responsiveOptions]="lineChart1.responsiveOptions" [events]="lineChart1.events"> </x-chartist>
+                <mat-card-title>Vendas Anuais</mat-card-title>
+                <mat-card-subtitle>Meses de 2020</mat-card-subtitle>
+                <div class="barchrt" style="height:325px;">
+
                 </div>
-                <ul class="list-inline text-center p-t-10">
-                    <li>
-                        <h6 class="text-muted text-success m-0"><i class="fa fa-circle font-10 m-r-10 "></i>Enviadas</h6>
-                    </li>
-                    <li>
-                        <h6 class="text-muted  text-info  m-0"><i class="fa fa-circle font-10 m-r-10"></i>Clicada</h6>
-                    </li>
-                </ul>
             </mat-card-content>
         </mat-card>
     </div>
@@ -206,16 +118,16 @@
                 </mat-card-actions>
                 <div fxLayout="row" fxLayoutWrap="wrap" class="m-t-30">
                     <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
-                        <h3 class="m-0 font-light">200</h3>
+                        <h3 class="m-0 font-light">1099</h3>
                         <small>Viagens</small>
                     </div>
                     <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
-                        <h3 class="m-0 font-light">200</h3>
+                        <h3 class="m-0 font-light">23,469</h3>
                         <small>Viagens com seguro</small>
                     </div>
                     <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
-                        <h3 class="m-0 font-light">500</h3>
-                        <small>Aprimoramento no sistema</small>
+                        <h3 class="m-0 font-light">6035</h3>
+                        <small>Curtidas</small>
                     </div>
                 </div>
             </mat-card-content>
@@ -223,66 +135,89 @@
     </div>
     <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
-            <mat-tab-group>
-                <mat-tab label="Atividade">
-                    <mat-card-content>
-                        <div class="d-flex no-blcok" *ngFor="let mytimeline of mytimelines">
-                            <div class="m-r-20"><img class="img-circle" width="50" [src]="mytimeline.image" alt="Image of {{mytimeline.from}}"> </div>
-                            <div class="p-b-20 b-b m-b-30">
-                                <h4 class="m-0">{{mytimeline.from}} <small class="text-muted">{{mytimeline.time}}</small></h4>
-                                <p class="text-muted">{{mytimeline.content}}</p>
-                                <div fxLayout="row" fxLayoutWrap="wrap">
-                                    <div fxFlex.gt-sm="20" fxFlex="100">
-                                        <img class="img-responsive rounded" [src]="mytimeline.attachment" *ngIf="mytimeline.attachment" alt="Image of {{mytimeline.attachment}}">
-                                    </div>
-                                </div>
-                                <button mat-raised-button color="{{mytimeline.buttons}}" *ngIf="mytimeline.buttons">Check Now</button>
+            <mat-card-content>
+                <mat-card-title>Lista de contatos</mat-card-title>
+                <mat-card-subtitle>Visão geral da campanha da Newsletter</mat-card-subtitle>
+                <mat-table #table [dataSource]="dataSource" class="contactlist">
+                    <ng-container matColumnDef="position">
+                        <mat-header-cell *matHeaderCellDef> Foto </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> <img src="{{element.position}}" class="img-circle" width="30" /></mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+                        <mat-cell *matCellDef="let element">
+                            <h5 class="m-0">{{element.name}}</h5>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="viagens">
+                        <mat-header-cell *matHeaderCellDef> Viagens </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.viagens}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="email">
+                        <mat-header-cell *matHeaderCellDef> email </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="nascimento">
+                        <mat-header-cell *matHeaderCellDef> Aniversário </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.nascimento}} </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+                <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]">
+                </mat-paginator>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-lg="50" fxFlex.gt-md="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Mensagens recentes</mat-card-title>
+                <mat-card-subtitle>Últimos comentários sos usuários sobre o sistema</mat-card-subtitle>
+                <div class="comment-widgets">
+                    <div class="d-flex flex-row comment-row" *ngFor="let mycomment of mycomments">
+                        <div class="p-2"><span class="round"><img src="{{mycomment.profile}}" alt="user" width="50"></span></div>
+                        <div class="comment-text w-100">
+                            <h5 class="m-0">{{mycomment.name}}</h5>
+                            <p class="m-b-5">{{mycomment.content}}</p>
+                            <div class="comment-footer">
+                                <span class="text-muted pull-right">{{mycomment.date}}</span>
+                                <span class="label label-{{mycomment.class}}">{{mycomment.status}}</span>
+                                <span class="action-icons">
+                               <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
+                               <a href="javascript:void(0)"><i class="ti-check"></i></a>
+                               <a href="javascript:void(0)"><i class="ti-heart"></i></a>
+                            </span>
                             </div>
                         </div>
-                    </mat-card-content>
-                </mat-tab>
-                <mat-tab label="Perfil">
-                    <mat-card-content>
-                        <mat-card-title>Form Basic Layouts</mat-card-title>
-                        <form class="basic-form">
-                            <div fxLayout="row" fxLayoutWrap="wrap">
-                                <div fxFlex.gt-sm="100" fxFlex="100">
-                                    <mat-form-field>
-                                        <input matInput placeholder="Some text value">
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex.gt-sm="100" fxFlex="100">
-                                    <mat-form-field>
-                                        <input matInput placeholder="EmailId" type="email">
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex.gt-sm="100" fxFlex="100">
-                                    <mat-form-field>
-                                        <input matInput placeholder="Password" type="password">
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex.gt-sm="100" fxFlex="100">
-                                    <mat-form-field>
-                                        <mat-select placeholder="Select">
-                                            <mat-option value="option">Option</mat-option>
-                                            <mat-option value="option">Option2</mat-option>
-                                            <mat-option value="option">Option3</mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex.gt-sm="100" fxFlex="100">
-                                    <mat-form-field>
-                                        <textarea matInput placeholder="Textarea"></textarea>
-                                    </mat-form-field>
-                                </div>
-                                <div fxFlex.gt-sm="100" fxFlex="100">
-                                    <button mat-raised-button color="primary">Update Profile</button>
-                                </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxFlex.gt-lg="50" fxFlex.gt-md="50" fxFlex.gt-xs="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Recentes mensaggens</mat-card-title>
+                <mat-card-subtitle>Últimas mensagens sobre usuários do Material</mat-card-subtitle>
+                <div class="mailbox message-widget">
+                    <div class="message-center">
+                        <a href="#" *ngFor="let mymessage of mymessages">
+                            <div class="user-img"> <img src="{{mymessage.useravatar}}" alt="user" class="img-circle" width="40">
+                                <span class="profile-status {{mymessage.status}} pull-right"></span>
                             </div>
-                        </form>
-                    </mat-card-content>
-                </mat-tab>
-            </mat-tab-group>
+                            <div class="mail-contnet">
+                                <h5>{{mymessage.from}}</h5>
+                                <span class="mail-desc">{{mymessage.subject}}</span>
+                                <span class="time">{{mymessage.time}}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </mat-card-content>
         </mat-card>
     </div>
 </div>
