@@ -13,18 +13,18 @@ import 'hammerjs';
 import * as moment from 'moment';
 import { ChartistModule } from 'ng-chartist';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { QuillModule } from 'ngx-quill';
 import { AppRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarioModule } from './components/calendario/calendario.module';
 import { DashboardsModule } from './components/dashboards/dashboards.module';
-import { AppBlankComponent } from './components/layouts/blank/blank.component';
-import { FullComponent } from './components/layouts/full/full.component';
-import { AppHeaderComponent } from './components/layouts/full/header/header.component';
-import { AppSidebarComponent } from './components/layouts/full/sidebar/sidebar.component';
-import { MenuItems } from './components/shared/menu-items/menu-items';
 import { TaskboardModule } from './components/taskboard/taskboard.module';
 import { MaterialModule } from './core/material-module/material.module';
-import { QuillModule } from 'ngx-quill';
+import { AppBlankComponent } from './layouts/blank/blank.component';
+import { FullComponent } from './layouts/full/full.component';
+import { AppHeaderComponent } from './layouts/full/header/header.component';
+import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
+import { MenuItems } from './shared/menu-items/menu-items';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);

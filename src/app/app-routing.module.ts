@@ -1,9 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { CalendarioComponent } from './components/calendario/calendario.component';
-import { TaskboardComponent } from './components/taskboard/taskboard.component';
-import { DashboardsComponent } from './components/dashboards/dashboards.component';
-import { FullComponent } from './components/layouts/full/full.component';
+import { Routes } from '@angular/router';
+import { FullComponent } from './layouts/full/full.component';
 
 export const AppRoutes: Routes = [{
     path: '',
@@ -23,17 +19,4 @@ export const AppRoutes: Routes = [{
       }
     ]
   }
-  /*
-  {
-    path: "taskboard",
-    component: TaskboardComponent
-  }*/
 ];
-
-/*
-@NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
-*/
