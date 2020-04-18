@@ -1,111 +1,80 @@
-<!-- ============================================================== -->
-<!-- Simple four boxes Row -->
-<!-- ============================================================== -->
 <div fxLayout="row" fxLayoutWrap="wrap">
-    <!-- column -->
     <div fxFlex.gt-sm="25" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
-                <!-- Row -->
                 <div class="d-flex no-block">
-                    <!-- column -->
                     <div class="m-r-10 no-shrink">
                         <button mat-fab mat-card-icon class="shadow-none bg-inverse  bg-success">
                       <mat-icon>account_circle</mat-icon>
                   </button>
                     </div>
-                    <!-- column -->
                     <div>
-                        <h3 class="m-0">386</h3>
-                        <h6 class="text-muted m-0">New Clients</h6>
+                        <h3 class="m-0">30</h3>
+                        <h6 class="text-muted m-0">Novos clientes</h6>
                     </div>
-
                 </div>
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- column -->
-    <!-- column -->
     <div fxFlex.gt-sm="25" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
-                <!-- Row -->
                 <div class="d-flex no-block">
-                    <!-- column -->
                     <div class="m-r-10 no-shrink">
                         <button mat-fab color="warn" mat-card-icon class="shadow-none  bg-warning">
                       <mat-icon>local_mall</mat-icon>
                   </button>
                     </div>
-                    <!-- column -->
                     <div>
                         <h3 class="m-0">2408</h3>
-                        <h6 class="text-muted m-0">All Projects</h6>
+                        <h6 class="text-muted m-0">Novas vendas</h6>
                     </div>
-
                 </div>
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- column -->
-    <!-- column -->
     <div fxFlex.gt-sm="25" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
-                <!-- Row -->
                 <div class="d-flex no-block">
-                    <!-- column -->
                     <div class="m-r-10 no-shrink">
                         <button mat-fab color="accent" mat-card-icon class="shadow-none">
                       <mat-icon>stars</mat-icon>
                   </button>
                     </div>
-                    <!-- column -->
                     <div>
-                        <h3 class="m-0">352</h3>
-                        <h6 class="text-muted m-0">New Items</h6>
+                        <h3 class="m-0">150</h3>
+                        <h6 class="text-muted m-0">Novas localidades</h6>
                     </div>
-
                 </div>
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- column -->
-    <!-- column -->
     <div fxFlex.gt-sm="25" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
-                <!-- Row -->
                 <div class="d-flex no-block">
-                    <!-- column -->
                     <div class="m-r-10 no-shrink">
                         <button mat-fab color="warn" mat-card-icon class="shadow-none bg-danger">
                       <mat-icon>content_paste</mat-icon>
                   </button>
                     </div>
-                    <!-- column -->
                     <div>
                         <h3 class="m-0">159</h3>
-                        <h6 class="text-muted m-0">New Invoices</h6>
+                        <h6 class="text-muted m-0">Novos questionários</h6>
                     </div>
-
                 </div>
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- column -->
 </div>
-<!-- ============================================================== -->
-<!-- Charts -->
-<!-- ============================================================== -->
 <div fxLayout="row" fxLayoutWrap="wrap">
     <!-- Column-->
     <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
-                <mat-card-title>Sales Overview</mat-card-title>
-                <mat-card-subtitle>Ample Admin Vs Material Admin</mat-card-subtitle>
-
+                <mat-card-title>Visão geral de vendas</mat-card-title>
+                <mat-card-subtitle>Orçamentos x vendas</mat-card-subtitle>
                 <div class="barchrt" style="height:360px;">
                     <x-chartist class="" [data]="barChart1.data" [type]="barChart1.type" [options]="barChart1.options" [responsiveOptions]="barChart1.responsiveOptions" [events]="barChart1.events"> </x-chartist>
                 </div>
@@ -120,12 +89,11 @@
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- Column-->
     <div fxFlex.gt-lg="25" fxFlex.gt-md="40" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
-                <mat-card-title>Our Visitors</mat-card-title>
-                <mat-card-subtitle>Different Devices Used to Visit</mat-card-subtitle>
+                <mat-card-title>Nossos visitantes</mat-card-title>
+                <mat-card-subtitle>Diferentes dispositivos usados para visitar</mat-card-subtitle>
                 <div class="piechart">
                     <x-chartist class="" [data]="donuteChart1.data" [type]="donuteChart1.type" [options]="donuteChart1.options" [responsiveOptions]="donuteChart1.responsiveOptions" [events]="donuteChart1.events"> </x-chartist>
                 </div>
@@ -144,68 +112,53 @@
                     </li>
                 </ul>
             </mat-card-content>
-
         </mat-card>
     </div>
-    <!-- Column-->
 </div>
-<!-- ============================================================== -->
-<!-- Chart boxes -->
-<!-- ============================================================== -->
 <div fxLayout="row" fxLayoutWrap="wrap">
-    <!-- column -->
     <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card class="bg-info">
             <mat-card-content>
-                <!-- column -->
                 <div class="d-flex no-block align-items-center">
                     <div class="stats">
-                        <h3 class="text-white m-0">Purchase</h3>
-                        <h6 class="text-white m-t-0">March 2017</h6>
-                        <h1 class="text-white m-0">35487</h1>
+                        <h3 class="text-white m-0">Compra</h3>
+                        <h6 class="text-white m-t-0">Abril 2020</h6>
+                        <h1 class="text-white m-0">557</h1>
                     </div>
                     <div class="spark-count ml-auto"></div>
                 </div>
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- column -->
-    <!-- column -->
     <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card class="bg-purple">
             <mat-card-content>
-                <!-- column -->
                 <div class="d-flex no-block align-items-center">
                     <div class="stats">
-                        <h3 class="text-white m-0">Expense</h3>
-                        <h6 class="text-white m-t-0">March 2017</h6>
-                        <h1 class="text-white m-0">35487</h1>
+                        <h3 class="text-white m-0">Despesa</h3>
+                        <h6 class="text-white m-t-0">Abril 2020</h6>
+                        <h1 class="text-white m-0">290</h1>
                     </div>
                     <div class="spark-count ml-auto"></div>
                 </div>
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- column -->
-    <!-- column -->
     <div fxFlex.gt-sm="33.33" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card class="bg-success">
             <mat-card-content>
                 <!-- column -->
                 <div class="d-flex no-block align-items-center">
                     <div class="stats">
-                        <h3 class="text-white m-0">Income</h3>
-                        <h6 class="text-white m-t-0">March 2017</h6>
-                        <h1 class="text-white m-0">35487</h1>
+                        <h3 class="text-white m-0">Renda</h3>
+                        <h6 class="text-white m-t-0">Abril 2020</h6>
+                        <h1 class="text-white m-0">267</h1>
                     </div>
                     <div class="spark-count ml-auto"></div>
                 </div>
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- column -->
-
-    <!-- column -->
 </div>
 <!-- ============================================================== -->
 <!-- Image and chart -->
@@ -226,22 +179,20 @@
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- Column-->
     <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
-                <mat-card-title>Newsletter Campaign</mat-card-title>
-                <mat-card-subtitle>Overview of Newsletter Campaign</mat-card-subtitle>
-
+                <mat-card-title>Campanha Newsletter</mat-card-title>
+                <mat-card-subtitle>Visão geral da campanha da Newsletter</mat-card-subtitle>
                 <div class="linearea" style="height:360px;">
                     <x-chartist class="" [data]="lineChart1.data" [type]="lineChart1.type" [options]="lineChart1.options" [responsiveOptions]="lineChart1.responsiveOptions" [events]="lineChart1.events"> </x-chartist>
                 </div>
                 <ul class="list-inline text-center p-t-10">
                     <li>
-                        <h6 class="text-muted text-success m-0"><i class="fa fa-circle font-10 m-r-10 "></i>Sent</h6>
+                        <h6 class="text-muted text-success m-0"><i class="fa fa-circle font-10 m-r-10 "></i>Enviadas</h6>
                     </li>
                     <li>
-                        <h6 class="text-muted  text-info  m-0"><i class="fa fa-circle font-10 m-r-10"></i>Clicked</h6>
+                        <h6 class="text-muted  text-info  m-0"><i class="fa fa-circle font-10 m-r-10"></i>Clicada</h6>
                     </li>
                 </ul>
             </mat-card-content>
