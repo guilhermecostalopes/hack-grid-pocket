@@ -97,6 +97,11 @@
             background: $light-danger;
         }
     }
+    .info {
+        .taskboard-task {
+            background: $light-inverse;
+        }
+    }
     .taskboard-cards {
         padding: 8px;
         box-sizing: border-box;
@@ -108,4 +113,37 @@
         font-size: 16px;
         font-weight: 500;
     }
+}
+
+.palavraInfo {
+    background-color: $info;
+    color: rgba(255, 255, 255, 255);
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.palavraDanger {
+    background-color: $danger;
+    color: rgba(255, 255, 255, 255);
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.palavraWarning {
+    background-color: $warning;
+    color: rgba(255, 255, 255, 255);
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
 }

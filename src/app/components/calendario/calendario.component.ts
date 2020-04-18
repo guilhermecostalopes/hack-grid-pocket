@@ -112,23 +112,23 @@ export class CalendarioComponent {
   events: CalendarEvent[] = [{
     start: subDays(startOfDay(new Date()), 1),
     end: addDays(new Date(), 1),
-    title: 'A 3 day event',
+    title: 'A 3 dias do evento',
     color: colors.red,
     actions: this.actions
   }, {
     start: startOfDay(new Date()),
-    title: 'An event with no end date',
+    title: 'Um evento sem data de término',
     color: colors.yellow,
     actions: this.actions
   }, {
     start: subDays(endOfMonth(new Date()), 3),
     end: addDays(endOfMonth(new Date()), 3),
-    title: 'A long event that spans 2 months',
+    title: 'Um evento longo que dura 2 meses',
     color: colors.blue
   }, {
     start: addHours(startOfDay(new Date()), 2),
     end: new Date(),
-    title: 'A draggable and resizable event',
+    title: 'Um evento arrastável e redimensionável',
     color: colors.yellow,
     actions: this.actions,
     resizable: {
@@ -176,7 +176,7 @@ export class CalendarioComponent {
 
   addEvent(): void {
     this.events.push({
-      title: 'New event',
+      title: 'Novo evento',
       start: startOfDay(new Date()),
       end: endOfDay(new Date()),
       color: colors.red,
