@@ -1,10 +1,9 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, Component, NgZone, OnDestroy, ViewChild, HostListener, Directive, AfterViewInit } from '@angular/core';
 import * as $ from 'jquery';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { MenuItems } from '../../shared/menu-items/menu-items';
 
-/** @title Responsive sidenav */
 @Component({
   selector: 'app-full-layout',
   templateUrl: 'full.component.html',

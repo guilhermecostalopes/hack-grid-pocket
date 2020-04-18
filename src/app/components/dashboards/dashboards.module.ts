@@ -1,13 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { RouterModule } from '@angular/router';
 import 'hammerjs';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MaterialModule } from 'src/app/core/material-module/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardsRoutes } from './dashboards.routing';
 import { ChartistModule } from 'ng-chartist';
 import { ChartsModule } from 'ng2-charts';
-import { MaterialModule } from 'src/app/core/material-module/material.module';
 import { DashboardsComponent } from './dashboards.component';
-import { DashboardsRoutes } from './dashboards.routing';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { DashboardsRoutes } from './dashboards.routing';
     FlexLayoutModule,
     ChartistModule,
     ChartsModule,
+    PerfectScrollbarModule,
     RouterModule.forChild(DashboardsRoutes)
   ],
   declarations: [ DashboardsComponent ]
