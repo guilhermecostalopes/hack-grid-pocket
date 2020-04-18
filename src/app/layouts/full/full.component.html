@@ -13,12 +13,6 @@
                <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage">
               </span> </a>
         </div>
-        <button mat-icon-button (click)="snav.toggle()" value="sidebarclosed">
-          <mat-icon>menu</mat-icon>
-      </button>
-        <button mat-icon-button class="srh-btn">
-          <mat-icon>search</mat-icon>
-      </button>
         <form class="app-search">
             <input type="text" class="form-control" placeholder="Search &amp; enter">
             <a class="cl-srh-btn"><i class="ti-close"></i></a>
@@ -27,10 +21,12 @@
         <app-header></app-header>
 
     </mat-toolbar>
-    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0" [ngClass]="{'minisidebar': minisidebar}">
-        <mat-sidenav #snav id="snav" class="pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches" (open)="sidebarOpened = true" (close)="sidebarOpened = false" [perfectScrollbar]="config">
-            <app-sidebar></app-sidebar>
-        </mat-sidenav>
+    <mat-sidenav-container>
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
         <mat-sidenav-content class="page-wrapper">
             <perfect-scrollbar [config]="config">
                 <div class="page-content">

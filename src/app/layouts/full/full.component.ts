@@ -1,5 +1,5 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, NgZone, OnDestroy, ViewChild, HostListener, Directive, AfterViewInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import * as $ from 'jquery';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { MenuItems } from '../../shared/menu-items/menu-items';
@@ -37,7 +37,7 @@ export class FullComponent implements OnDestroy, AfterViewInit {
 
   ngAfterViewInit() {
      (<any>$(".srh-btn, .cl-srh-btn")).on('click', function () {
-            (<any>$(".app-search")).toggle(200);
-        });
+        (<any>$(".app-search")).toggle(200);
+     });
   }
 }
