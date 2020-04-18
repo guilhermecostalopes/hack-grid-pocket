@@ -17,12 +17,13 @@ import { AppRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarioModule } from './components/calendario/calendario.module';
 import { DashboardsModule } from './components/dashboards/dashboards.module';
+import { AppBlankComponent } from './components/layouts/blank/blank.component';
 import { FullComponent } from './components/layouts/full/full.component';
+import { AppHeaderComponent } from './components/layouts/full/header/header.component';
+import { AppSidebarComponent } from './components/layouts/full/sidebar/sidebar.component';
 import { MenuItems } from './components/shared/menu-items/menu-items';
 import { TaskboardModule } from './components/taskboard/taskboard.module';
 import { MaterialModule } from './core/material-module/material.module';
-import { AppSidebarComponent } from './components/layouts/full/sidebar/sidebar.component';
-import { AppHeaderComponent } from './components/layouts/full/header/header.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -33,7 +34,8 @@ export function momentAdapterFactory() {
     AppComponent,
     FullComponent,
     AppSidebarComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    AppBlankComponent
   ],
   imports: [
     TaskboardModule,
