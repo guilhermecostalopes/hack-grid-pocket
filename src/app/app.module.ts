@@ -20,6 +20,7 @@ import { CalendarHeaderComponent } from './components/calendario/calendar-header
 import { CalendarioComponent } from './components/calendario/calendario.component';
 import { TaskboardComponent } from './components/taskboard/taskboard.component';
 import { MaterialModule } from './core/material-module/material.module';
+import { DashboardsComponent } from './components/dashboards/dashboards.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -30,7 +31,8 @@ export function momentAdapterFactory() {
     AppComponent,
     CalendarioComponent,
     CalendarHeaderComponent,
-    TaskboardComponent
+    TaskboardComponent,
+    DashboardsComponent
   ],
   imports: [
     CommonModule,

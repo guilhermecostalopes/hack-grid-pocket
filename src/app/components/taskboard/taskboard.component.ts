@@ -20,46 +20,35 @@ interface Taskboard {
 export class TaskboardComponent {
 
   taskboard: Taskboard[] = [{
-    title: 'To Dos',
+    title: 'Para fazer',
     class: 'todos',
     tasks: [{
-      title: 'Launch new template',
-      description: 'Integer posuere erat a ante venenatis dapibus posuere.'
+      title: 'Fazer integração com APIs, se necessário',
+      description: 'O mentor da Globo mandou fazer crawler da programação que está no site da Globo, mas o mentor de tecnologia desaconselhou isto, pois disse que se a Globo mudar algo no site isso pode prejudicar a nossa aplicação'
     }, {
-      title: 'Book a Ticket',
-      description: 'Blandit tempus porttitor aasfs.'
-    }, {
-      title: 'Task review',
-      description: 'Lorem Ipsum, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.',
-      class: 'task-status-info'
+      title: 'Incluir o backend no heroku',
+      description: 'Criar a conta. Após subir o código e o banco de dados para o servidor e fazer io teste'
     }]
   }, {
-    title: 'In Progress',
+    title: 'Fazendo',
     class: 'inprogress',
     tasks: [{
-      title: 'Website Design',
-      description: 'Integer posuere erat a ante venenatis dapibus posuere.'
+      title: 'Tela Login e cadastro do app.',
+      description: 'Assim, que fizer os endpoints, coloco aqui qual você deve chamar.'
     }, {
-      title: 'Angular 5 material',
-      description: 'Lorem Ipsum, dapibus ac facilisis in, egestas eget quam. Integer posuere erat aassg.',
+      title: 'Criar apresentação do pitch',
+      description: 'Fazer os vídeos.',
       class: 'task-status-danger'
     }, {
-      title: 'Horizontal Layoutbug',
-      description: 'Lorem Ipsum, dapibus ac facilisis in',
+      title: 'Criar banco de dados e endpoints para chat',
+      description: 'Criar a consula e o endpoint para o frontend e o mobile acessar',
       class: 'task-status-info'
     }, {
-      title: 'Error --prod',
-      description: 'Lorem Ipsum, dapibus ac facilisis.'
-    }, {
-      title: 'Update to angular5',
-      description: 'Dapibus ac facilisis in, egestas eget quam. Integer posuere erat aassg.'
-    }, {
-      title: 'Give quatation',
-      description: 'Commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
-      class: 'task-status-warning'
+      title: 'Criar as classes do Backend',
+      description: 'Criar as classes de entidades no backend.'
     }]
   }, {
-    title: 'Completed',
+    title: 'Pronto',
     class: 'completed',
     tasks: [{
       title: 'Design work',
