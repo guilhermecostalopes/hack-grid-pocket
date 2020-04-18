@@ -8,22 +8,21 @@ import { FullComponent } from './components/layouts/full/full.component';
 export const AppRoutes: Routes = [{
     path: '',
     component: FullComponent,
-    children: [{
-      path: 'dashboards',
-      loadChildren: './components/dashboards/dashboards.module#DashboardsModule'
-    }]
+    children: [
+      {
+        path: 'dashboards',
+        loadChildren: './components/dashboards/dashboards.module#DashboardsModule'
+      },
+      {
+        path: 'calendario',
+        loadChildren: './components/calendario/calendario.module#CalendarioModule'
+      }
+    ]
   }
-  /*{
-    path: "calendario",
-    component: CalendarioComponent
-  },
+  /*
   {
     path: "taskboard",
     component: TaskboardComponent
-  },
-  {
-    path: "dashboard",
-    component: DashboardsComponent
   }*/
 ];
 
