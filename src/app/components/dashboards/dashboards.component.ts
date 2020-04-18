@@ -107,13 +107,13 @@ export class DashboardsComponent implements AfterViewInit{
 }, {
   from: 'Jorge Luiz',
   time: '(5 minute ago)',
-  image: 'assets/images/users/6.jpg',
+  image: 'assets/images/users/d2.jpg',
   content: 'O processo de implantação foi muito bem planejado. Todas as parametrizações foram realizadas, bem como treinamentos específicos para cada área. O grande diferencial da solução é confiabilidade. Ganhamos muito com a automatização nos processos, vendas de seguros, venda de viagens, kits de produtos, produto composto, desconto progressivo, enfim, só evoluímos em produtividade.',
   buttons: 'primary'
 }, {
   from: 'Bruno César',
   time: '(8 minute ago)',
-  image: 'assets/images/users/3.jpg',
+  image: 'assets/images/users/d1.jpg',
   attachment: 'assets/images/big/img1.jpg',
   content: 'Os principais benefícios deste software para os corretores são a confiabilidade nas informações geradas e a inovação constante no processo de vendas de seguro. Com recursos inovadores, a solução facilita o dia a dia do operador primário do sistema até o mais alto nível de gerência de uma corretora.'
 }, {

@@ -3,6 +3,8 @@ import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy } from '@angular
 import * as $ from 'jquery';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { MenuItems } from '../../shared/menu-items/menu-items';
+import { AppSidebarComponent } from './sidebar/sidebar.component';
+import { AppHeaderComponent } from './header/header.component';
 
 /** @title Responsive sidenav */
 @Component({

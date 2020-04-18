@@ -21,6 +21,8 @@ import { FullComponent } from './components/layouts/full/full.component';
 import { MenuItems } from './components/shared/menu-items/menu-items';
 import { TaskboardModule } from './components/taskboard/taskboard.module';
 import { MaterialModule } from './core/material-module/material.module';
+import { AppSidebarComponent } from './components/layouts/full/sidebar/sidebar.component';
+import { AppHeaderComponent } from './components/layouts/full/header/header.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -29,7 +31,9 @@ export function momentAdapterFactory() {
 @NgModule({
   declarations: [
     AppComponent,
-    FullComponent
+    FullComponent,
+    AppSidebarComponent,
+    AppHeaderComponent
   ],
   imports: [
     TaskboardModule,
