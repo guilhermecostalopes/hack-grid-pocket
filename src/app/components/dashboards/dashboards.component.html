@@ -170,11 +170,11 @@
             <img mat-card-image src="assets/images/big/img1.jpg" alt="Photo of a Shiba Inu">
             <mat-card-content>
                 <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain
+                    O Shiba Inu é a menor das seis raças de spitz originais e distintas do Japão. Um cão pequeno e ágil que lida muito bem com terrenos montanhosos.
                 </p>
                 <mat-card-actions>
-                    <button mat-raised-button color="accent">LIKE</button>
-                    <button mat-button>SHARE</button>
+                    <button mat-raised-button color="accent">Gostei</button>
+                    <button mat-button>Compartilhar</button>
                 </mat-card-actions>
             </mat-card-content>
         </mat-card>
@@ -198,11 +198,8 @@
             </mat-card-content>
         </mat-card>
     </div>
-
 </div>
-<!-- ============================================================== -->
-<!-- Image Card row-->
-<!-- ============================================================== -->
+
 <div fxLayout="row" fxLayoutWrap="wrap">
     <!-- Card column -->
     <div fxFlex.gt-lg="25" fxFlex.gt-md="40" fxFlex.gt-xs="100" fxFlex="100">
@@ -210,35 +207,32 @@
             <img mat-card-image src="assets/images/background/profile-bg.jpg" alt="Photo of a Shiba Inu">
             <mat-card-content>
                 <div class="pro-img"><img src="assets/images/users/4.jpg" width="100" alt="user"></div>
-                <h3 class="m-b-0">Angela Dominic</h3>
+                <h3 class="m-b-0">Guilherme Costa Lopes</h3>
                 <h6 class="m-t-0 ">Web Designer &amp; Developer</h6>
                 <mat-card-actions>
-                    <button mat-raised-button color="warn">Follow</button>
+                    <button mat-raised-button color="warn">Seguir</button>
                 </mat-card-actions>
                 <div fxLayout="row" fxLayoutWrap="wrap" class="m-t-30">
                     <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
-                        <h3 class="m-0 font-light">1099</h3>
-                        <small>Articles</small>
+                        <h3 class="m-0 font-light">200</h3>
+                        <small>Viagens</small>
                     </div>
                     <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
-                        <h3 class="m-0 font-light">23,469</h3>
-                        <small>Followers</small>
+                        <h3 class="m-0 font-light">200</h3>
+                        <small>Viagens com seguro</small>
                     </div>
                     <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="33.33%" fxFlex="100">
-                        <h3 class="m-0 font-light">6035</h3>
-                        <small>Likes</small>
+                        <h3 class="m-0 font-light">500</h3>
+                        <small>Aprimoramento no sistema</small>
                     </div>
                 </div>
             </mat-card-content>
         </mat-card>
     </div>
-    <!-- Card column -->
-    <!-- Card column -->
     <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-tab-group>
-                <!-- Tab 1 -->
-                <mat-tab label="Activity">
+                <mat-tab label="Atividade">
                     <mat-card-content>
                         <div class="d-flex no-blcok" *ngFor="let mytimeline of mytimelines">
                             <div class="m-r-20"><img class="img-circle" width="50" [src]="mytimeline.image" alt="Image of {{mytimeline.from}}"> </div>
@@ -255,36 +249,26 @@
                         </div>
                     </mat-card-content>
                 </mat-tab>
-                <!-- End Tab 1 -->
-                <!-- Tab 2 -->
-                <mat-tab label="Profile">
+                <mat-tab label="Perfil">
                     <mat-card-content>
                         <mat-card-title>Form Basic Layouts</mat-card-title>
-                        <!-- ============================================================== -->
-                        <!-- column -->
-                        <!-- ============================================================== -->
                         <form class="basic-form">
                             <div fxLayout="row" fxLayoutWrap="wrap">
-                                <!-- column -->
                                 <div fxFlex.gt-sm="100" fxFlex="100">
                                     <mat-form-field>
                                         <input matInput placeholder="Some text value">
                                     </mat-form-field>
                                 </div>
-                                <!-- column -->
                                 <div fxFlex.gt-sm="100" fxFlex="100">
                                     <mat-form-field>
                                         <input matInput placeholder="EmailId" type="email">
                                     </mat-form-field>
                                 </div>
-                                <!-- column -->
                                 <div fxFlex.gt-sm="100" fxFlex="100">
                                     <mat-form-field>
                                         <input matInput placeholder="Password" type="password">
                                     </mat-form-field>
                                 </div>
-
-                                <!-- column -->
                                 <div fxFlex.gt-sm="100" fxFlex="100">
                                     <mat-form-field>
                                         <mat-select placeholder="Select">
@@ -294,14 +278,11 @@
                                         </mat-select>
                                     </mat-form-field>
                                 </div>
-
-                                <!-- column -->
                                 <div fxFlex.gt-sm="100" fxFlex="100">
                                     <mat-form-field>
                                         <textarea matInput placeholder="Textarea"></textarea>
                                     </mat-form-field>
                                 </div>
-                                <!-- column -->
                                 <div fxFlex.gt-sm="100" fxFlex="100">
                                     <button mat-raised-button color="primary">Update Profile</button>
                                 </div>

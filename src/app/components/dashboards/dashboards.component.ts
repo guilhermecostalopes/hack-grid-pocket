@@ -61,13 +61,7 @@ export class DashboardsComponent implements AfterViewInit{
         donut: true,
         showLabel: false,
         donutWidth: 30
-
       }
-      // events: {
-      //   draw(data: any): boolean {
-      //     return data;
-      //   }
-      // }
     };
   // This is for the line chart
   // Line chart
@@ -105,27 +99,32 @@ export class DashboardsComponent implements AfterViewInit{
    }
   // Timeline
   mytimelines: any[] = [{
-  from: 'Nirav joshi',
-  time: '(5 minute ago)',
+  from: 'Addae do Carmo',
+  time: '(1 minute ago)',
   image: 'assets/images/users/1.jpg',
   attachment: 'assets/images/big/img2.jpg',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper'
+  content: 'Considero o excelente suporte da ferramenta um dos seus diferenciais. As dúvidas durante a implantação foram poucas devido ao bom trabalho feito pela equipe. E se temos alguma dúvida durante as rotinas, isso é resolvido na hora de forma online.'
 }, {
-  from: 'Sunil joshi',
-  time: '(3 minute ago)',
-  image: 'assets/images/users/2.jpg',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper',
+  from: 'Jorge Luiz',
+  time: '(5 minute ago)',
+  image: 'assets/images/users/6.jpg',
+  content: 'O processo de implantação foi muito bem planejado. Todas as parametrizações foram realizadas, bem como treinamentos específicos para cada área. O grande diferencial da solução é confiabilidade. Ganhamos muito com a automatização nos processos, vendas de seguros, venda de viagens, kits de produtos, produto composto, desconto progressivo, enfim, só evoluímos em produtividade.',
   buttons: 'primary'
 }, {
-  from: 'Vishal Bhatt',
-  time: '(1 minute ago)',
+  from: 'Bruno César',
+  time: '(8 minute ago)',
   image: 'assets/images/users/3.jpg',
   attachment: 'assets/images/big/img1.jpg',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper'
+  content: 'Os principais benefícios deste software para os corretores são a confiabilidade nas informações geradas e a inovação constante no processo de vendas de seguro. Com recursos inovadores, a solução facilita o dia a dia do operador primário do sistema até o mais alto nível de gerência de uma corretora.'
 }, {
-  from: 'Dhiren Adesara',
-  time: '(1 minute ago)',
-  image: 'assets/images/users/4.jpg',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper',
+  from: 'Annie',
+  time: '(10 minute ago)',
+  image: 'assets/images/users/2.jpg',
+  content: 'Este applicativo proporciona à nossa empresa de corretores extrema agilidade em seus atendimentos, sejam eles remotos, por telefone ou chat e assume total responsabilidade e compromisso perante ao fisco de cada estado.',
   buttons: 'warn'
+}, {
+  from: 'Victor Lourenço',
+  time: '(11 minute ago)',
+  image: 'assets/images/users/5.jpg',
+  content: 'Os prazos propostos no início do projeto foram respeitados, passando segurança e transparência para meus clientes.'
 }]; }
