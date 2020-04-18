@@ -1,4 +1,5 @@
 import * as $ from 'jquery';
+import 'hammerjs';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -21,6 +22,7 @@ import { CalendarioComponent } from './components/calendario/calendario.componen
 import { TaskboardComponent } from './components/taskboard/taskboard.component';
 import { MaterialModule } from './core/material-module/material.module';
 import { DashboardsComponent } from './components/dashboards/dashboards.component';
+import { ChartistModule } from 'ng-chartist';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -47,6 +49,7 @@ export function momentAdapterFactory() {
     //QuillModule,
     FlexLayoutModule,
     PerfectScrollbarModule,
+    ChartistModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory })
   ],
   providers: [],

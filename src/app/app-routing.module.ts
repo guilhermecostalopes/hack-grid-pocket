@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CalendarioComponent } from './components/calendario/calendario.component';
 import { TaskboardComponent } from './components/taskboard/taskboard.component';
+import { DashboardsComponent } from './components/dashboards/dashboards.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: "taskboard",
     component: TaskboardComponent
+  },
+  {
+    path: "dashboard",
+    component: DashboardsComponent
   }
 ];
 
