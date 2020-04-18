@@ -14,7 +14,6 @@ import 'core-js';
 import * as moment from 'moment';
 import { DragulaModule } from 'ng2-dragula';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-//import { QuillModule } from 'ngx-quill';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarHeaderComponent } from './components/calendario/calendar-header.component';
@@ -46,7 +45,6 @@ export function momentAdapterFactory() {
     FlatpickrModule.forRoot(),
     MaterialModule,
     DragulaModule.forRoot(),
-    //QuillModule,
     FlexLayoutModule,
     PerfectScrollbarModule,
     ChartistModule,
