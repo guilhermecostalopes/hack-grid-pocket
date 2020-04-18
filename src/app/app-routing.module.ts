@@ -16,6 +16,10 @@ export const AppRoutes: Routes = [{
       {
         path: 'calendario',
         loadChildren: './components/calendario/calendario.module#CalendarioModule'
+      },
+      {
+        path: 'taskboard',
+        loadChildren: './components/calendario/calendario.module#TaskboardModule'
       }
     ]
   }

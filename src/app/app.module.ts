@@ -12,7 +12,6 @@ import 'core-js';
 import 'hammerjs';
 import * as moment from 'moment';
 import { ChartistModule } from 'ng-chartist';
-import { DragulaModule } from 'ng2-dragula';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { AppRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +19,7 @@ import { CalendarioModule } from './components/calendario/calendario.module';
 import { DashboardsModule } from './components/dashboards/dashboards.module';
 import { FullComponent } from './components/layouts/full/full.component';
 import { MenuItems } from './components/shared/menu-items/menu-items';
-import { TaskboardComponent } from './components/taskboard/taskboard.component';
+import { TaskboardModule } from './components/taskboard/taskboard.module';
 import { MaterialModule } from './core/material-module/material.module';
 
 export function momentAdapterFactory() {
@@ -30,10 +29,10 @@ export function momentAdapterFactory() {
 @NgModule({
   declarations: [
     AppComponent,
-    FullComponent,
-    TaskboardComponent
+    FullComponent
   ],
   imports: [
+    TaskboardModule,
     DashboardsModule,
     CalendarioModule,
     RouterModule.forRoot(AppRoutes, { useHash: true }),
@@ -41,11 +40,9 @@ export function momentAdapterFactory() {
     FormsModule,
     NgbModalModule,
     BrowserModule,
-    //AppRoutingModule,
     BrowserAnimationsModule,
     FlatpickrModule.forRoot(),
     MaterialModule,
-    DragulaModule.forRoot(),
     FlexLayoutModule,
     PerfectScrollbarModule,
     ChartistModule
