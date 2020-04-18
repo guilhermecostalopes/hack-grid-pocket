@@ -24,6 +24,7 @@ import { AppSidebarComponent } from './components/layouts/full/sidebar/sidebar.c
 import { MenuItems } from './components/shared/menu-items/menu-items';
 import { TaskboardModule } from './components/taskboard/taskboard.module';
 import { MaterialModule } from './core/material-module/material.module';
+import { QuillModule } from 'ngx-quill';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -51,7 +52,8 @@ export function momentAdapterFactory() {
     MaterialModule,
     FlexLayoutModule,
     PerfectScrollbarModule,
-    ChartistModule
+    ChartistModule,
+    QuillModule
   ],
   providers: [MenuItems],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
