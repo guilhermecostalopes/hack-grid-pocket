@@ -29,12 +29,17 @@
                         ],
                         "styles": [
                             "node_modules/chartist/dist/chartist.css",
+                            "node_modules/quill/dist/quill.snow.css",
+                            "node_modules/quill/dist/quill.bubble.css",
                             "node_modules/angular-calendar/css/angular-calendar.css",
                             "node_modules/dragula/dist/dragula.css",
                             "./src/assets/styles/style.scss",
                             "./src/styles.scss"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/jquery/dist/jquery.min.js",
+                            "./src/assets/js/jquery.sparkline.min.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
