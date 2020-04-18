@@ -2,7 +2,8 @@ import {
   ChangeDetectionStrategy,
   Component,
   TemplateRef,
-  ViewChild
+  ViewChild,
+  OnInit
 } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
@@ -122,6 +123,7 @@ export class CalendarioComponent implements OnInit {
   activeDayIsOpen: boolean = true;
 
   constructor(private modal: NgbModal) {}
+  ngOnInit(): void { }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {

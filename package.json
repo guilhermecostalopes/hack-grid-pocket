@@ -36,6 +36,8 @@
         "jquery": "^3.5.0",
         "moment": "^2.24.0",
         "ng-chartist": "^4.1.0",
+        "ng2-dragula": "^2.1.1",
+        "ngx-perfect-scrollbar": "^9.0.0",
         "ngx-quill": "^8.1.5",
         "perfect-scrollbar": "^1.5.0",
         "rxjs": "^6.5.5",
