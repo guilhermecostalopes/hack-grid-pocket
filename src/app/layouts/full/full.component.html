@@ -52,9 +52,6 @@
         <!-- ============================================================== -->
         <!-- Right sidebar toggle - style you can find in rightsidebar.component.scss -->
         <!-- ============================================================== -->
-        <button (click)="end.toggle()" mat-icon-button class="ml-xs overflow-visible">
-        <mat-icon>settings</mat-icon>
-      </button>
     </mat-toolbar>
     <!-- ============================================================== -->
     <!-- End Topbar - style you can find in pages.scss -->
@@ -75,37 +72,7 @@
         <!-- ============================================================== -->
         <!-- Right Sidebar - style you can find in rightsidebar.component.scss -->
         <!-- ============================================================== -->
-        <mat-sidenav #end position="end" class="chat-panel" mode="over" opened="false">
-            <div class="scroll">
-                <mat-nav-list>
 
-                    <h3 mat-subheader class="text-uppercase font-weight-bold">Settings</h3>
-                    <mat-list-item>
-                        <mat-slide-toggle color="warn" (change)="dir = (dir == 'rtl' ? 'ltr' : 'rtl')">RTL</mat-slide-toggle>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <mat-slide-toggle color="warn" [(ngModel)]="boxed">Boxed Layout</mat-slide-toggle>
-                    </mat-list-item>
-                    <!--<mat-list-item>
-                  <mat-slide-toggle [(ngModel)]="minisidebar">Mini Sidebar</mat-slide-toggle>
-                </mat-list-item>    -->
-                    <mat-divider></mat-divider>
-                    <h3 mat-subheader class="text-uppercase font-weight-bold">Colors</h3>
-                    <mat-list-item>
-                        <mat-checkbox color="warn" [(ngModel)]="danger" (change)="green = blue = false" class="text-danger">Red</mat-checkbox>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <mat-checkbox color="warn" [(ngModel)]="green" (change)="danger = blue = false" class="text-megna">Teal Green</mat-checkbox>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <mat-checkbox color="warn" [(ngModel)]="blue" (change)="green = danger = false" class="text-info">Blue</mat-checkbox>
-                    </mat-list-item>
-                    <mat-list-item>
-                        <mat-checkbox color="warn" [(ngModel)]="dark" (change)="green = blue = danger = false">Dark</mat-checkbox>
-                    </mat-list-item>
-                </mat-nav-list>
-            </div>
-        </mat-sidenav>
 
         <!-- ============================================================== -->
         <!-- Page container - style you can find in pages.scss -->
