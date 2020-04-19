@@ -58,7 +58,7 @@ const MENUITEMS =
   },
   {
     state: 'taskboard',
-    name: 'kanban',
+    name: 'Funil de vendas',
     type: 'sub',
     icon: 'apps',
     children:
