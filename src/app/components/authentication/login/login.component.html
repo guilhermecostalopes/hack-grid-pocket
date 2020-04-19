@@ -13,10 +13,6 @@
                                 <input matInput placeholder="Login" [formControl]="form.controls['uname']">
                             </mat-form-field>
                             <small *ngIf="form.controls['uname'].hasError('required') && form.controls['uname'].touched" class="text-danger support-text">Login é obrigatório.</small>
-                        </div>
-                    </div>
-                    <div fxLayout="row" fxLayoutWrap="wrap">
-                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
                             <mat-form-field>
                                 <input matInput type="password" placeholder="Senha" [formControl]="form.controls['password']">
                             </mat-form-field>
@@ -25,7 +21,7 @@
                     </div>
                     <div fxLayout="row" fxLayoutWrap="wrap">
                         <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
-                            <mat-checkbox color="warn">Remember me</mat-checkbox>
+                            <mat-checkbox color="warn">Lembrar</mat-checkbox>
                         </div>
                     </div>
                     <div fxLayout="row" fxLayoutWrap="wrap">
