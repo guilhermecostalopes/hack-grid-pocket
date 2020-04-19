@@ -79,6 +79,24 @@ const MENUITEMS =
         state: 'pesquisar', name: 'Pesquisar'
       }
     ]
+  },
+  {
+    state: 'iteracoes',
+    name: 'Iterações',
+    type: 'sub',
+    icon: 'alarm',
+    children:
+    [
+      {
+        state: 'mensagens', name: 'Mensagens'
+      },
+      {
+        state: 'notificacoes', name: 'Notificações'
+      },
+      {
+        state: 'chat', name: 'Chat'
+      }
+    ]
   }
 ];
 

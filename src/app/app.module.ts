@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { AuthenticationModule } from './components/authentication/authentication.module';
 import { CalendarioModule } from './components/calendario/calendario.module';
 import { DashboardsModule } from './components/dashboards/dashboards.module';
+import { IteracoesModule } from './components/iteracoes/iteracoes.module';
 import { TaskboardModule } from './components/taskboard/taskboard.module';
 import { VendasModule } from './components/vendas/vendas.module';
 import { MaterialModule } from './core/material-module/material.module';
@@ -48,6 +49,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppBlankComponent
   ],
   imports: [
+    IteracoesModule,
     VendasModule,
     AuthenticationModule,
     SharedModule,

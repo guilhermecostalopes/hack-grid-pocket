@@ -28,6 +28,10 @@ export const AppRoutes: Routes =
       {
         path: 'vendas',
         loadChildren: './components/vendas/vendas.module#VendasModule'
+      },
+      {
+        path: 'iteracoes',
+        loadChildren: './components/iteracoes/iteracoes.module#IteracoesModule'
       }
     ]
   },
