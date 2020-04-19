@@ -8,7 +8,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 export class AppHeaderComponent {
     public config: PerfectScrollbarConfigInterface = {};
 
-    notifications: Object[] = [
+    notifications: any[] = [
       {
         round: 'round-success',
         icon: 'ti-calendar',
@@ -43,7 +43,7 @@ export class AppHeaderComponent {
       }
     ];
 
-    mymessages: Object[] = [
+    mymessages: any[] = [
       {
         useravatar: 'assets/images/users/5.jpg',
         status: 'online',

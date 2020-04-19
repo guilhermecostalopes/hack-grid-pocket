@@ -11,10 +11,11 @@
             <li>
                 <div class="message-center">
                     <perfect-scrollbar [config]="config">
-                        <a href="#" *ngFor="let notification of notifications">
+                        <a [routerLink]="['/iteracoes/notificacoes']" *ngFor="let notification of notifications">
                             <div class="round {{notification.round}}"><i class="{{notification.icon}}"></i></div>
                             <div class="mail-contnet">
-                                <h5>{{notification.title}}</h5> <span class="mail-desc">{{notification.subject}}</span> <span class="time">{{notification.time}}</span>
+                                <h5>{{notification.title}}</h5> <span class="mail-desc">{{notification.subject}}</span>
+                                <span class="time">{{notification.time}}</span>
                             </div>
                         </a>
                     </perfect-scrollbar>
@@ -36,7 +37,7 @@
             <li>
                 <div class="message-center">
                     <perfect-scrollbar [config]="config">
-                        <a href="#" *ngFor="let mymessage of mymessages">
+                        <a [routerLink]="['/iteracoes/mensagens']" *ngFor="let mymessage of mymessages">
                             <div class="user-img"> <img src="{{mymessage.useravatar}}" alt="user" class="img-circle" width="40">
                                 <span class="profile-status {{mymessage.status}} pull-right"></span>
                             </div>

@@ -51,7 +51,7 @@ export class ChatComponent {
     return window.matchMedia(`(max-width: 960px)`).matches;
   }
 
-  onSelect(message: Object[]): void {
+  onSelect(message: any[]): void {
     this.selectedMessage = message;
   }
 }
