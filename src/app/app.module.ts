@@ -17,6 +17,7 @@ import {
 } from 'ngx-perfect-scrollbar';
 import { AppRoutes } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthenticationModule } from './components/authentication/authentication.module';
 import { CalendarioModule } from './components/calendario/calendario.module';
 import { DashboardsModule } from './components/dashboards/dashboards.module';
 import { TaskboardModule } from './components/taskboard/taskboard.module';
@@ -46,6 +47,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppBlankComponent
   ],
   imports: [
+    AuthenticationModule,
     SharedModule,
     TaskboardModule,
     DashboardsModule,
