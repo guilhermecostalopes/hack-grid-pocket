@@ -8,10 +8,13 @@ import { MaterialModule } from 'src/app/core/material-module/material.module';
 import { CalendarioComponent } from './calendario.component';
 import { CalendarioRoutes } from './calendario.routing';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { FormsModule } from '@angular/forms';
+import { CalendarHeaderComponent } from './calendar-header.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     MaterialModule,
     FlexLayoutModule,
     RouterModule.forChild(CalendarioRoutes),
@@ -19,7 +22,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
     //CalendarDateFormatter,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory })
   ],
-  declarations: [ CalendarioComponent ],
+  declarations: [ CalendarioComponent, CalendarHeaderComponent ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 

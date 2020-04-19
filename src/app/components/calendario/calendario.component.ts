@@ -1,27 +1,9 @@
-import { Component, ChangeDetectionStrategy, Inject, ViewChild, TemplateRef } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-//import { MatDialog, MatDialogRef, MatDialogConfig, MAT_DIALOG_DATA } from '@angular/material';
-
-@Component({
-  selector: 'app-calendar-dialog',
-  template: `
-  <h4 class="m-t-0">Event action occurred</h4>
-  <div>
-    Action:
-    <pre>{{ data?.action }}</pre>
-  </div><br/>
-  <div>
-    Event:
-
-  </div><br/>
-  <button mat-raised-button color="primary"  (click)="dialogRef.close()">Close dialog</button>`
-})
-export class CalendarDialogComponent {
-  constructor(
-    public dialogRef: MatDialogRef<CalendarDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
-}
-
+import {
+  Component,
+  ChangeDetectionStrategy,
+  ViewChild,
+  TemplateRef,
+} from '@angular/core';
 import {
   startOfDay,
   endOfDay,
@@ -30,31 +12,30 @@ import {
   endOfMonth,
   isSameDay,
   isSameMonth,
-  addHours
+  addHours,
 } from 'date-fns';
-
 import { Subject } from 'rxjs';
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
   CalendarEvent,
   CalendarEventAction,
-  CalendarEventTimesChangedEvent
+  CalendarEventTimesChangedEvent,
+  CalendarView,
 } from 'angular-calendar';
-import { MatDialogRef, MAT_DIALOG_DATA, MatDialogConfig, MatDialog } from '@angular/material/dialog';
 
 const colors: any = {
   red: {
-    primary: '#fc4b6c',
-    secondary: '#f9e7eb'
+    primary: '#ad2121',
+    secondary: '#FAE3E3',
   },
   blue: {
-    primary: '#1e88e5',
-    secondary: '#D1E8FF'
+    primary: '#1e90ff',
+    secondary: '#D1E8FF',
   },
   yellow: {
-    primary: '#ffb22b',
-    secondary: '#FDF1BA'
-  }
+    primary: '#e3bc08',
+    secondary: '#FDF1BA',
+  },
 };
 
 @Component({
@@ -64,86 +45,85 @@ const colors: any = {
   styleUrls: ['./calendario.component.scss']
 })
 export class CalendarioComponent {
+  //@ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
 
-  dialogRef: MatDialogRef<CalendarDialogComponent>;
-  lastCloseResult: string;
-  actionsAlignment: string;
-  config: MatDialogConfig = {
-    disableClose: false,
-    width: '',
-    height: '',
-    position: {
-      top: '',
-      bottom: '',
-      left: '',
-      right: ''
-    },
-    data: {
-      action: '',
-      event: []
-    }
-  };
-  numTemplateOpens = 0;
+  view: CalendarView = CalendarView.Month;
 
-  view = 'month';
+  CalendarView = CalendarView;
 
   viewDate: Date = new Date();
 
   modalData: {
-    action: string,
-    event: CalendarEvent
+    action: string;
+    event: CalendarEvent;
   };
 
-  actions: CalendarEventAction[] = [{
-    label: '<i class="ti-pencil act"></i>',
-    onClick: ({event}: {event: CalendarEvent}): void => {
-      this.handleEvent('Edited', event);
-    }
-  }, {
-    label: '<i class="ti-close act"></i>',
-    onClick: ({event}: {event: CalendarEvent}): void => {
-      this.events = this.events.filter(iEvent => iEvent !== event);
-      this.handleEvent('Deleted', event);
-    }
-  }];
+  actions: CalendarEventAction[] = [
+    {
+      label: '<i class="fa fa-fw fa-pencil"></i>',
+      a11yLabel: 'Edit',
+      onClick: ({ event }: { event: CalendarEvent }): void => {
+        this.handleEvent('Edited', event);
+      },
+    },
+    {
+      label: '<i class="fa fa-fw fa-times"></i>',
+      a11yLabel: 'Delete',
+      onClick: ({ event }: { event: CalendarEvent }): void => {
+        this.events = this.events.filter((iEvent) => iEvent !== event);
+        this.handleEvent('Deleted', event);
+      },
+    },
+  ];
 
   refresh: Subject<any> = new Subject();
 
-  events: CalendarEvent[] = [{
-    start: subDays(startOfDay(new Date()), 1),
-    end: addDays(new Date(), 1),
-    title: 'A 3 dias do evento',
-    color: colors.red,
-    actions: this.actions
-  }, {
-    start: startOfDay(new Date()),
-    title: 'Um evento sem data de término',
-    color: colors.yellow,
-    actions: this.actions
-  }, {
-    start: subDays(endOfMonth(new Date()), 3),
-    end: addDays(endOfMonth(new Date()), 3),
-    title: 'Um evento longo que dura 2 meses',
-    color: colors.blue
-  }, {
-    start: addHours(startOfDay(new Date()), 2),
-    end: new Date(),
-    title: 'Um evento arrastável e redimensionável',
-    color: colors.yellow,
-    actions: this.actions,
-    resizable: {
-      beforeStart: true,
-      afterEnd: true
+  events: CalendarEvent[] = [
+    {
+      start: subDays(startOfDay(new Date()), 1),
+      end: addDays(new Date(), 1),
+      title: 'A 3 day event',
+      color: colors.red,
+      actions: this.actions,
+      allDay: true,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
     },
-    draggable: true
-  }];
+    {
+      start: startOfDay(new Date()),
+      title: 'An event with no end date',
+      color: colors.yellow,
+      actions: this.actions,
+    },
+    {
+      start: subDays(endOfMonth(new Date()), 3),
+      end: addDays(endOfMonth(new Date()), 3),
+      title: 'A long event that spans 2 months',
+      color: colors.blue,
+      allDay: true,
+    },
+    {
+      start: addHours(startOfDay(new Date()), 2),
+      end: addHours(new Date(), 2),
+      title: 'A draggable and resizable event',
+      color: colors.yellow,
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true,
+      },
+      draggable: true,
+    },
+  ];
 
-  activeDayIsOpen = true;
+  activeDayIsOpen: boolean = true;
 
-  constructor(public dialog: MatDialog, @Inject(DOCUMENT) doc: any) {}
+  constructor(private modal: NgbModal) {}
 
-  dayClicked({date, events}: {date: Date, events: CalendarEvent[]}): void {
-
+  dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
       if (
         (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
@@ -152,40 +132,60 @@ export class CalendarioComponent {
         this.activeDayIsOpen = false;
       } else {
         this.activeDayIsOpen = true;
-        this.viewDate = date;
       }
+      this.viewDate = date;
     }
   }
 
-  eventTimesChanged({event, newStart, newEnd}: CalendarEventTimesChangedEvent): void {
-    event.start = newStart;
-    event.end = newEnd;
+  eventTimesChanged({
+    event,
+    newStart,
+    newEnd,
+  }: CalendarEventTimesChangedEvent): void {
+    this.events = this.events.map((iEvent) => {
+      if (iEvent === event) {
+        return {
+          ...event,
+          start: newStart,
+          end: newEnd,
+        };
+      }
+      return iEvent;
+    });
     this.handleEvent('Dropped or resized', event);
-    this.refresh.next();
   }
 
   handleEvent(action: string, event: CalendarEvent): void {
-    this.config.data = {event, action};
-    this.dialogRef = this.dialog.open(CalendarDialogComponent, this.config);
-
-    this.dialogRef.afterClosed().subscribe((result: string) => {
-      this.lastCloseResult = result;
-      this.dialogRef = null;
-    });
+    this.modalData = { event, action };
+    //this.modal.open(this.modalContent, { size: 'lg' });
   }
 
   addEvent(): void {
-    this.events.push({
-      title: 'Novo evento',
-      start: startOfDay(new Date()),
-      end: endOfDay(new Date()),
-      color: colors.red,
-      draggable: true,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true
-      }
-    });
-    this.refresh.next();
+    this.events = [
+      ...this.events,
+      {
+        title: 'New event',
+        start: startOfDay(new Date()),
+        end: endOfDay(new Date()),
+        color: colors.red,
+        draggable: true,
+        resizable: {
+          beforeStart: true,
+          afterEnd: true,
+        },
+      },
+    ];
+  }
+
+  deleteEvent(eventToDelete: CalendarEvent) {
+    this.events = this.events.filter((event) => event !== eventToDelete);
+  }
+
+  setView(view: CalendarView) {
+    this.view = view;
+  }
+
+  closeOpenMonthViewDay() {
+    this.activeDayIsOpen = false;
   }
 }
