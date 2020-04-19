@@ -29,6 +29,7 @@ export class FullComponent implements OnDestroy, AfterViewInit {
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
     this.blue = true;
+    this.sidebarOpened = true;
   }
 
   ngOnDestroy(): void {
