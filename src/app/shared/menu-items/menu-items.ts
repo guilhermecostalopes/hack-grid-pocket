@@ -24,7 +24,33 @@ export interface Menu {
   children?: ChildrenItems[];
 }
 
-const MENUITEMS = [];
+const MENUITEMS =
+[
+  {
+    state: '',
+    name: 'Menu principal',
+    type: 'saperator',
+    icon: 'av_timer'
+  },
+  {
+    state: 'dashboards',
+    name: 'Dashboard',
+    type: 'link',
+    icon: 'av_timer'
+  },
+  {
+    state: 'calendario',
+    name: 'Calendário',
+    type: 'link',
+    icon: 'today'
+  },
+  {
+    state: 'taskboard',
+    name: 'kanban',
+    type: 'link',
+    icon: 'apps'
+  }
+];
 
 @Injectable()
 
