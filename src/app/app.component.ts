@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hackGridPocket';
+  nomeSistema = "Lets's Travel";
 }
