@@ -1,10 +1,10 @@
 <div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-lg="75" fxFlex.gt-md="60" fxFlex.gt-xs="100" fxFlex="100">
+    <div fxFlex.gt-lg="75" fxFlex.gt-md="100" fxFlex.gt-xs="100" fxFlex="100">
         <mat-card>
             <mat-card-content>
                 <mat-card-title>Vendas</mat-card-title>
-                <mat-card-subtitle>Visão geral da campanha da Newsletter</mat-card-subtitle>
-                <!--<mat-table #table [dataSource]="dataSource" class="contactlist">
+                <mat-card-subtitle>Vendas de passagens</mat-card-subtitle>
+                <mat-table #table [dataSource]="dataSource" class="contactlist">
                     <ng-container matColumnDef="position">
                         <mat-header-cell *matHeaderCellDef> Foto </mat-header-cell>
                         <mat-cell *matCellDef="let element"> <img src="{{element.position}}" class="img-circle" width="30" /></mat-cell>
@@ -15,23 +15,47 @@
                             <h5 class="m-0">{{element.name}}</h5>
                         </mat-cell>
                     </ng-container>
-                    <ng-container matColumnDef="viagens">
-                        <mat-header-cell *matHeaderCellDef> Viagens </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.viagens}} </mat-cell>
+                    <ng-container matColumnDef="destino">
+                        <mat-header-cell *matHeaderCellDef> Destino </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.destino}} </mat-cell>
                     </ng-container>
                     <ng-container matColumnDef="email">
                         <mat-header-cell *matHeaderCellDef> email </mat-header-cell>
                         <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
                     </ng-container>
-                    <ng-container matColumnDef="nascimento">
-                        <mat-header-cell *matHeaderCellDef> Aniversário </mat-header-cell>
-                        <mat-cell *matCellDef="let element"> {{element.nascimento}} </mat-cell>
+                    <ng-container matColumnDef="saida">
+                        <mat-header-cell *matHeaderCellDef> Data da saída </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.saida}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="seguro">
+                        <mat-header-cell *matHeaderCellDef> Seguro </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.seguro}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="tipoSeguro">
+                        <mat-header-cell *matHeaderCellDef> Tipo de Seguro </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.tipoSeguro}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="valorSeguro">
+                        <mat-header-cell *matHeaderCellDef> Valor do seguro R$ </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.valorSeguro | currency}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="valorViagem">
+                        <mat-header-cell *matHeaderCellDef> Valor da viagem R$ </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.valorViagem | currency}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="promocao">
+                        <mat-header-cell *matHeaderCellDef> Promoção </mat-header-cell>
+                        <mat-cell *matCellDef="let element"> {{element.promocao}} </mat-cell>
                     </ng-container>
                     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
                 </mat-table>
-                <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]">
-                </mat-paginator>-->
+                <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20, 50]">
+                </mat-paginator>
+                <div>Totais: Viagens: R$
+                    <span class="viagens">{{getValorViagem() | currency}}</span> - Seguros: R$
+                    <span class="seguros">{{getValorSeguro() | currency}}</span>
+                </div>
             </mat-card-content>
         </mat-card>
     </div>

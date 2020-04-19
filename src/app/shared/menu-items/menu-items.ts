@@ -49,6 +49,12 @@ const MENUITEMS =
     name: 'kanban',
     type: 'link',
     icon: 'apps'
+  },
+  {
+    state: 'vendas',
+    name: 'Vendas',
+    type: 'link',
+    icon: 'attach_money'
   }
 ];
 

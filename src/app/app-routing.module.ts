@@ -24,6 +24,10 @@ export const AppRoutes: Routes =
       {
         path: 'taskboard',
         loadChildren: './components/taskboard/taskboard.module#TaskboardModule'
+      },
+      {
+        path: 'vendas',
+        loadChildren: './components/vendas/vendas.module#VendasModule'
       }
     ]
   },

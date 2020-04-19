@@ -21,13 +21,13 @@ import { AuthenticationModule } from './components/authentication/authentication
 import { CalendarioModule } from './components/calendario/calendario.module';
 import { DashboardsModule } from './components/dashboards/dashboards.module';
 import { TaskboardModule } from './components/taskboard/taskboard.module';
+import { VendasModule } from './components/vendas/vendas.module';
 import { MaterialModule } from './core/material-module/material.module';
 import { AppBlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
 import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import { SharedModule } from './shared/shared.module';
-import { VendasComponent } from './components/vendas/vendas.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -45,10 +45,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FullComponent,
     AppSidebarComponent,
     AppHeaderComponent,
-    AppBlankComponent,
-    VendasComponent
+    AppBlankComponent
   ],
   imports: [
+    VendasModule,
     AuthenticationModule,
     SharedModule,
     TaskboardModule,
