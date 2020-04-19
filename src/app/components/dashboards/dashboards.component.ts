@@ -1,21 +1,10 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { ChartType } from 'chart.js';
+import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import * as Chartist from 'chartist';
 import { ChartEvent } from 'ng-chartist';
-
-declare var require: any;
-
-const data: any = require('./data.json');
-
-export interface Chart {
-  type: ChartType;
-  data: Chartist.IChartistData;
-  options?: any;
-  responsiveOptions?: any;
-  events?: ChartEvent;
-}
+import { Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-dashboards',
@@ -25,36 +14,41 @@ export interface Chart {
 })
 export class DashboardsComponent implements AfterViewInit{
 
-    // Barchart
-    /*barChart1: Chart = {
-        type: 'Bar',
-        data: data['Bar'],
-        options: {
-            seriesBarDistance: 15,
-            high: 12,
-            axisX: {
-                showGrid: false, offset: 20
-            },
-            axisY: {
-                showGrid: true, offset: 40
-            }
-        },
-        responsiveOptions: [
-            [
-                'screen and (min-width: 640px)',
-                {
-                    axisX: {
-                        labelInterpolationFnc: function (value: number, index: number): string {
-                            return index % 1 === 0 ? `${value}` : null;
-                        }
-                    }
-                }
-            ]
-        ]
-    };*/
+    public barChartOptions: ChartOptions = {
+      responsive: true,
+      scales: { xAxes: [{}], yAxes: [{}] },
+    };
+    public barChartData: ChartDataSets[] = [
+      { data: [25000, 12500, 13500, 5000, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Vendas' },
+      { data: [20000, 7500, 10500, 3000, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Despesas' }
+    ];
 
+    public barChartLabels: Label[] = [
+    "Jan",
+    "Fev",
+    "Mar",
+    "Abr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Set",
+    "Out",
+    "Nov",
+    "Dez"];
 
-    // Doughnut
+    public barChartLegend = true;
+
+    public barChartType: ChartType = 'bar';
+
+    public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
+      console.log(event, active);
+    }
+
+    public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
+      console.log(event, active);
+    }
+
     public doughnutChartLabels: string[] = [
         'Desktop',
         'Mobile',
@@ -69,9 +63,7 @@ export class DashboardsComponent implements AfterViewInit{
     public doughnutChartLegend: boolean = false;
 
      ngAfterViewInit(){
-        //Sparkline chart
         var sparklineLogin = function () {
-            // spark count
             (<any>$('.spark-count')).sparkline([4, 5, 0, 10, 9, 12, 4, 9, 4, 5, 3, 10, 9, 12, 10, 9, 12, 4, 9], {
                 type: 'bar'
                 , width: '100%'
@@ -89,18 +81,12 @@ export class DashboardsComponent implements AfterViewInit{
                 sparkResize = setTimeout(sparklineLogin, 500);
             });
         sparklineLogin();
-         /**
-       * Set the paginator after the view init since this component will
-       * be able to query its view for the initialized paginator.
-       */
          this.dataSource.paginator = this.paginator;
      }
 
-    // This is for the table
     displayedColumns = ['position', 'name', 'viagens', 'email', 'nascimento'];
     dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
     @ViewChild ( MatPaginator ) paginator: MatPaginator;
-    // This is for the comments
     mycomments: Object[] = [{
       name: 'Addae do Carmo',
       content: 'Considero o excelente suporte da ferramenta um dos seus diferenciais. As dúvidas durante a implantação foram poucas devido ao bom trabalho feito pela equipe. E se temos alguma dúvida durante as rotinas, isso é resolvido na hora de forma online.',
@@ -138,7 +124,6 @@ export class DashboardsComponent implements AfterViewInit{
       date: '18/04/2020 às 11:00:00 hs'
     }];
 
-    // This is for Mymessages
     mymessages: Object[] = [{
       useravatar: 'assets/images/users/1.jpg',
       status: 'online',
