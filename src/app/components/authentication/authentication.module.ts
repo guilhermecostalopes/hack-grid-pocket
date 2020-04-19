@@ -7,6 +7,7 @@ import { MaterialModule } from 'src/app/core/material-module/material.module';
 import { AuthenticationRoutes } from './authentication.routing';
 import { LoginComponent } from './login/login.component';
 import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.componen
   ],
   declarations: [
     LoginComponent,
-    EsqueceuSenhaComponent
+    EsqueceuSenhaComponent,
+    RegistroComponent
   ]
 })
 export class AuthenticationModule {}

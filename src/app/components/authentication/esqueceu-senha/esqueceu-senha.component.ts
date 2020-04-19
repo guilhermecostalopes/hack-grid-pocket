@@ -14,7 +14,7 @@ export class EsqueceuSenhaComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group ( {
-      email: [ null, Validators.compose( [ Validators.required ] ) ]
+      email: [ null, Validators.compose( [ Validators.required] ) ]
     } );
   }
 
