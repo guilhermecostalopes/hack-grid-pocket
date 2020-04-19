@@ -27,6 +27,7 @@ import { FullComponent } from './layouts/full/full.component';
 import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import { SharedModule } from './shared/shared.module';
+import { VendasComponent } from './components/vendas/vendas.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -44,7 +45,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FullComponent,
     AppSidebarComponent,
     AppHeaderComponent,
-    AppBlankComponent
+    AppBlankComponent,
+    VendasComponent
   ],
   imports: [
     AuthenticationModule,
