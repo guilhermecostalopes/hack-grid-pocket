@@ -1,1 +1,24 @@
-<p>esqueceu-senha works!</p>
+<div class="login-register">
+    <div class="login-register-box">
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="text-center"><img alt="homepage" src="assets/images/mini_mala.png">
+                        <h4 class="m-t-0">Recover Password</h4>
+                    </div>
+                    <p class="text-center font-14">Digite seu e-mail e enviaremos o link de redefinição de senha.</p>
+                    <div fxLayout="column" fxLayoutAlign="space-around">
+                        <div class="pb-1">
+                            <mat-form-field style="width: 100%">
+                                <input matInput placeholder="E-mail" type="email" [formControl]="form.controls['email']">
+                            </mat-form-field>
+                            <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="text-danger support-text">Você deve incluir um endereço de email.</small>
+                            <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="text-danger support-text">Você deve incluir um endereço de email</small>
+                        </div>
+                        <button mat-raised-button color="primary" type="submit" class="btn-block btn-lg m-t-20" [disabled]="!form.valid">Enviar</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
