@@ -2,8 +2,6 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
-import * as Chartist from 'chartist';
-import { ChartEvent } from 'ng-chartist';
 import { Label } from 'ng2-charts';
 
 @Component({
@@ -87,92 +85,109 @@ export class DashboardsComponent implements AfterViewInit{
     displayedColumns = ['position', 'name', 'viagens', 'email', 'nascimento'];
     dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
     @ViewChild ( MatPaginator ) paginator: MatPaginator;
-    mycomments: Object[] = [{
-      name: 'Addae do Carmo',
-      content: 'Considero o excelente suporte da ferramenta um dos seus diferenciais. As dúvidas durante a implantação foram poucas devido ao bom trabalho feito pela equipe. E se temos alguma dúvida durante as rotinas, isso é resolvido na hora de forma online.',
-      profile: 'assets/images/users/1.jpg',
-      status: 'Pending',
-      class: 'info',
-      date: '18/04/2020 às 18:00:00 hs'
-    },{
-      name: 'Jorge Luiz',
-      content: 'O processo de implantação foi muito bem planejado. Todas as parametrizações foram realizadas, bem como treinamentos específicos para cada área. O grande diferencial da solução é confiabilidade. Ganhamos muito com a automatização nos processos, vendas de seguros, venda de viagens, kits de produtos, produto composto, desconto progressivo, enfim, só evoluímos em produtividade.',
-      profile: 'assets/images/users/d2.jpg',
-      status: 'Approved',
-      class: 'light-success',
-      date: '18/04/2020 às 15:00:00 hs'
-    },{
-      name: 'Bruno César',
-      content: 'Os principais benefícios deste software para os corretores são a confiabilidade nas informações geradas e a inovação constante no processo de vendas de seguro. Com recursos inovadores, a solução facilita o dia a dia do operador primário do sistema até o mais alto nível de gerência de uma corretora.',
-      profile: 'assets/images/users/d1.jpg',
-      status: 'Pending',
-      class: 'danger',
-      date: '18/04/2020 às 14:00:00 hs'
-    },{
-      name: 'Annie',
-      content: 'Este applicativo proporciona à nossa empresa de corretores extrema agilidade em seus atendimentos, sejam eles remotos, por telefone ou chat e assume total responsabilidade e compromisso perante ao fisco de cada estado.',
-      profile: 'assets/images/users/2.jpg',
-      status: 'Pending',
-      class: 'info',
-      date: '18/04/2020 às 12:00:00 hs'
-    },{
-      name: 'Victor Lourenço',
-      content: 'Os prazos propostos no início do projeto foram respeitados, passando segurança e transparência para meus clientes.',
-      profile: 'assets/images/users/5.jpg',
-      status: 'Pending',
-      class: 'info',
-      date: '18/04/2020 às 11:00:00 hs'
-    }];
+    mycomments: any[] =
+    [
+      {
+        name: 'Addae do Carmo',
+        content: 'Considero o excelente suporte da ferramenta um dos seus diferenciais. As dúvidas durante a implantação foram poucas devido ao bom trabalho feito pela equipe. E se temos alguma dúvida durante as rotinas, isso é resolvido na hora de forma online.',
+        profile: 'assets/images/users/1.jpg',
+        status: 'Pending',
+        class: 'info',
+        date: '18/04/2020 às 18:00:00 hs'
+      },
+      {
+        name: 'Jorge Luiz',
+        content: 'O processo de implantação foi muito bem planejado. Todas as parametrizações foram realizadas, bem como treinamentos específicos para cada área. O grande diferencial da solução é confiabilidade. Ganhamos muito com a automatização nos processos, vendas de seguros, venda de viagens, kits de produtos, produto composto, desconto progressivo, enfim, só evoluímos em produtividade.',
+        profile: 'assets/images/users/d2.jpg',
+        status: 'Approved',
+        class: 'light-success',
+        date: '18/04/2020 às 15:00:00 hs'
+      },
+      {
+        name: 'Bruno César',
+        content: 'Os principais benefícios deste software para os corretores são a confiabilidade nas informações geradas e a inovação constante no processo de vendas de seguro. Com recursos inovadores, a solução facilita o dia a dia do operador primário do sistema até o mais alto nível de gerência de uma corretora.',
+        profile: 'assets/images/users/d1.jpg',
+        status: 'Pending',
+        class: 'danger',
+        date: '18/04/2020 às 14:00:00 hs'
+      },
+      {
+        name: 'Annie',
+        content: 'Este applicativo proporciona à nossa empresa de corretores extrema agilidade em seus atendimentos, sejam eles remotos, por telefone ou chat e assume total responsabilidade e compromisso perante ao fisco de cada estado.',
+        profile: 'assets/images/users/2.jpg',
+        status: 'Pending',
+        class: 'info',
+        date: '18/04/2020 às 12:00:00 hs'
+      },
+      {
+        name: 'Victor Lourenço',
+        content: 'Os prazos propostos no início do projeto foram respeitados, passando segurança e transparência para meus clientes.',
+        profile: 'assets/images/users/5.jpg',
+        status: 'Pending',
+        class: 'info',
+        date: '18/04/2020 às 11:00:00 hs'
+      }
+    ];
 
-    mymessages: Object[] = [{
-      useravatar: 'assets/images/users/1.jpg',
-      status: 'online',
-      from: 'Addae do Carmo',
-      subject: 'Já chegou na reunião ?',
-      time: '9:30 AM'
-    }, {
-      useravatar: 'assets/images/users/2.jpg',
-      status: 'busy',
-      from: 'Annie',
-      subject: 'Que ótimo aplicativo',
-      time: '9:10 AM'
-    }, {
-      useravatar: 'assets/images/users/3.jpg',
-      status: 'away',
-      from: 'Victor Lourenço',
-      subject: 'Já chegou na reunião ?',
-      time: '9:08 AM'
-    },{
-      useravatar: 'assets/images/users/4.jpg',
-      status: 'busy',
-      from: 'Helela Lopes',
-      subject: 'Vou indicar a um amigo',
-      time: '9:10 AM'
-    }, {
-      useravatar: 'assets/images/users/6.jpg',
-      status: 'away',
-      from: 'João Lopes',
-      subject: 'Já chegou na reunião ?',
-      time: '9:08 AM'
-    },{
-      useravatar: 'assets/images/users/7.jpg',
-      status: 'busy',
-      from: 'Ricardo Bomtempo',
-      subject: 'Vou indicar a um amigo',
-      time: '9:10 AM'
-    }, {
-      useravatar: 'assets/images/users/8.jpg',
-      status: 'away',
-      from: 'Renato Bomtempo',
-      subject: 'Vou indicar a um amigo',
-      time: '9:08 AM'
-    }, {
-      useravatar: 'assets/images/users/6.jpg',
-      status: 'offline',
-      from: 'João luiz',
-      subject: 'Já chegou na reunião ?',
-      time: '9:00 AM'
-    }];
+    mymessages: any[] =
+    [
+      {
+        useravatar: 'assets/images/users/1.jpg',
+        status: 'online',
+        from: 'Addae do Carmo',
+        subject: 'Já chegou na reunião ?',
+        time: '9:30 AM'
+      },
+      {
+        useravatar: 'assets/images/users/2.jpg',
+        status: 'busy',
+        from: 'Annie',
+        subject: 'Que ótimo aplicativo',
+        time: '9:10 AM'
+      },
+      {
+        useravatar: 'assets/images/users/3.jpg',
+        status: 'away',
+        from: 'Victor Lourenço',
+        subject: 'Já chegou na reunião ?',
+        time: '9:08 AM'
+      },
+      {
+        useravatar: 'assets/images/users/4.jpg',
+        status: 'busy',
+        from: 'Helela Lopes',
+        subject: 'Vou indicar a um amigo',
+        time: '9:10 AM'
+      },
+      {
+        useravatar: 'assets/images/users/6.jpg',
+        status: 'away',
+        from: 'João Lopes',
+        subject: 'Já chegou na reunião ?',
+        time: '9:08 AM'
+      },
+      {
+        useravatar: 'assets/images/users/7.jpg',
+        status: 'busy',
+        from: 'Ricardo Bomtempo',
+        subject: 'Vou indicar a um amigo',
+        time: '9:10 AM'
+      },
+      {
+        useravatar: 'assets/images/users/8.jpg',
+        status: 'away',
+        from: 'Renato Bomtempo',
+        subject: 'Vou indicar a um amigo',
+        time: '9:08 AM'
+      },
+      {
+        useravatar: 'assets/images/users/6.jpg',
+        status: 'offline',
+        from: 'João luiz',
+        subject: 'Já chegou na reunião ?',
+        time: '9:00 AM'
+      }
+    ];
 
 }
 export interface Element {
