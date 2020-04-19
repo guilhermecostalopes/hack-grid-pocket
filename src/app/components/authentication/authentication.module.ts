@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/app/core/material-module/material.module';
 import { AuthenticationRoutes } from './authentication.routing';
 import { LoginComponent } from './login/login.component';
+import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './login/login.component';
     MaterialModule
   ],
   declarations: [
-    LoginComponent
+    LoginComponent,
+    EsqueceuSenhaComponent
   ]
 })
 export class AuthenticationModule {}
