@@ -3,7 +3,7 @@ import { VendasComponent } from './vendas.component';
 
 export const  VendasRoutes: Routes = [
   {
-       path: '',
+       path: 'pesquisar',
        component: VendasComponent
    }
  ];

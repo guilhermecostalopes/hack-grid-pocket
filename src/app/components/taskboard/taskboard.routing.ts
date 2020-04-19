@@ -3,7 +3,7 @@ import { TaskboardComponent } from './taskboard.component';
 
 export const TaskboardRoutes: Routes = [
   {
-       path: '',
+       path: 'pesquisar',
        component: TaskboardComponent
    }
  ];

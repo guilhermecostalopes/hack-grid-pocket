@@ -8,6 +8,7 @@ import { AuthenticationRoutes } from './authentication.routing';
 import { LoginComponent } from './login/login.component';
 import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
 import { RegistroComponent } from './registro/registro.component';
+import { Erro404Component } from './erro404/erro404.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { RegistroComponent } from './registro/registro.component';
   declarations: [
     LoginComponent,
     EsqueceuSenhaComponent,
-    RegistroComponent
+    RegistroComponent,
+    Erro404Component
   ]
 })
 export class AuthenticationModule {}

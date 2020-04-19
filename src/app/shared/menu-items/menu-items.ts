@@ -35,26 +35,50 @@ const MENUITEMS =
   {
     state: 'dashboards',
     name: 'Dashboard',
-    type: 'link',
-    icon: 'av_timer'
+    type: 'sub',
+    icon: 'av_timer',
+    children:
+    [
+      {
+        state: 'mostrar', name: 'Informações'
+      }
+    ]
   },
   {
     state: 'calendario',
     name: 'Calendário',
-    type: 'link',
-    icon: 'today'
+    type: 'sub',
+    icon: 'today',
+    children:
+    [
+      {
+        state: 'pesquisar', name: 'Pesquisar'
+      }
+    ]
   },
   {
     state: 'taskboard',
     name: 'kanban',
-    type: 'link',
-    icon: 'apps'
+    type: 'sub',
+    icon: 'apps',
+    children:
+    [
+      {
+        state: 'pesquisar', name: 'Pesquisar'
+      }
+    ]
   },
   {
     state: 'vendas',
     name: 'Vendas',
-    type: 'link',
-    icon: 'attach_money'
+    type: 'sub',
+    icon: 'attach_money',
+    children:
+    [
+      {
+        state: 'pesquisar', name: 'Pesquisar'
+      }
+    ]
   }
 ];
 

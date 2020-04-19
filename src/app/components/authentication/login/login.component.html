@@ -3,7 +3,8 @@
         <mat-card>
             <mat-card-content>
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                    <div class="text-center"><img alt="homepage" src="assets/images/mini_mala.png">
+                    <div class="text-center">
+                        <img alt="homepage" src="assets/images/mini_mala.png">
                         <h4 class="m-t-0">Entrar</h4>
                         <h6 class="m-t-0">Faça login para continuar</h6>
                     </div>
@@ -13,6 +14,10 @@
                                 <input matInput placeholder="Login" [formControl]="form.controls['uname']">
                             </mat-form-field>
                             <small *ngIf="form.controls['uname'].hasError('required') && form.controls['uname'].touched" class="text-danger support-text">Login é obrigatório.</small>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutWrap="wrap">
+                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
                             <mat-form-field>
                                 <input matInput type="password" placeholder="Senha" [formControl]="form.controls['password']">
                             </mat-form-field>
@@ -20,18 +25,18 @@
                         </div>
                     </div>
                     <div fxLayout="row" fxLayoutWrap="wrap">
-                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100">
-                            <mat-checkbox color="warn">Lembrar</mat-checkbox>
+                        <div fxFlex.gt-sm="50" fxFlex.gt-xs="50">
+                            <mat-checkbox color="warn">Lembrar da minha senha</mat-checkbox>
                         </div>
                     </div>
                     <div fxLayout="row" fxLayoutWrap="wrap">
-                        <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" class="text-right">
+                        <div fxFlex.gt-sm="50" fxFlex.gt-xs="50" class="text-right">
                             <a [routerLink]="['/authentication/esqueceu-senha']" class="link">Esqueceu a senha ?</a>
                         </div>
                     </div>
                     <div fxLayout="row" fxLayoutWrap="wrap">
                         <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-                            <button mat-raised-button color="accent" class="btn-block btn-lg m-t-20 m-b-20" type="submit" [disabled]="!form.valid">Login</button>
+                            <button mat-raised-button color="primary" class="btn-block btn-lg m-t-20 m-b-20" type="submit" [disabled]="!form.valid">Login</button>
                         </div>
                     </div>
                     <div fxLayout="row" fxLayoutWrap="wrap">
@@ -46,7 +51,7 @@
                     </div>
                     <div fxLayout="row" fxLayoutWrap="wrap">
                         <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100" class="text-center">
-                            <span>Não é cadastrado, <a [routerLink]="['/authentication/register']"  class="text-info link">clique aqui</a> </span>
+                            <span>Não é cadastrado ? <a [routerLink]="['/authentication/registro']"  class="text-info link">Clique aqui </a> para registrar</span>
                         </div>
                     </div>
                 </form>

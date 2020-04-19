@@ -10,7 +10,7 @@ export const AppRoutes: Routes =
     children: [
       {
         path: '',
-        redirectTo: '/dashboards',
+        redirectTo: '/dashboards/mostrar',
         pathMatch: 'full'
       },
       {

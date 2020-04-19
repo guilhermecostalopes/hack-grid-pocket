@@ -3,7 +3,7 @@ import { CalendarioComponent } from './calendario.component';
 
 export const CalendarioRoutes: Routes = [
   {
-       path: '',
+       path: 'pesquisar',
        component: CalendarioComponent
    }
  ];

@@ -3,7 +3,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 
 const password = new FormControl('', Validators.required);
-const confirmPassword = new FormControl('');
+const confirmPassword = new FormControl('', Validators.required);
+const termo = new FormControl('', Validators.required);
 
 @Component({
   selector: 'app-registro',
@@ -19,11 +20,12 @@ export class RegistroComponent implements OnInit {
     this.form = this.fb.group( {
       email: [null, Validators.compose([Validators.required])],
       password: password,
-      confirmPassword: confirmPassword
+      confirmPassword: confirmPassword,
+      termo: termo
     } );
   }
 
   onSubmit(): void {
-    this.router.navigate( ['/dasboards'] );
+    this.router.navigate( ['/dashboards'] );
   }
 }
