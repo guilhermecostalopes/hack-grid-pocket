@@ -1,4 +1,3 @@
-@import "../../../assets/styles/variable";
 .taskboard {
     overflow-x: auto;
     overflow-y: auto;
@@ -63,43 +62,43 @@
         right: 0px;
     }
     .taskboard-task.task-status-success:after {
-        border-top-color: $success;
+        border-top-color: #e8fdf8;
     }
     .taskboard-task.task-status-info:after {
-        border-top-color: $info;
+        border-top-color: #1e88e5;
     }
     .taskboard-task.task-status-warning:after {
-        border-top-color: $warning;
+        border-top-color: #ffb22b;
     }
     .taskboard-task.task-status-danger:after {
-        border-top-color: $danger;
+        border-top-color: #fc4b6c;
     }
     .task-decription {
         color: rgba(0, 0, 0, .5);
     }
     .todos {
         .taskboard-task {
-            background: $light-info;
+            background: #e3f3fd;
         }
     }
     .inprogress {
         .taskboard-task {
-            background: $light-warning;
+            background: #fff8ec;
         }
     }
     .completed {
         .taskboard-task {
-            background: $light-success;
+            background: #e8fdf8;
         }
     }
     .onhold {
         .taskboard-task {
-            background: $light-danger;
+            background: #f9e7eb;
         }
     }
     .info {
         .taskboard-task {
-            background: $light-inverse;
+            background: #f6f6f6;
         }
     }
     .taskboard-cards {
@@ -116,7 +115,7 @@
 }
 
 .palavraInfo {
-    background-color: $info;
+    background-color: #1e88e5;
     color: rgba(255, 255, 255, 255);
     padding-top: 5px;
     padding-left: 5px;
@@ -127,7 +126,7 @@
 }
 
 .palavraDanger {
-    background-color: $danger;
+    background-color: #fc4b6c;
     color: rgba(255, 255, 255, 255);
     padding-top: 5px;
     padding-left: 5px;
@@ -138,7 +137,7 @@
 }
 
 .palavraWarning {
-    background-color: $warning;
+    background-color: #ffb22b;
     color: rgba(255, 255, 255, 255);
     padding-top: 5px;
     padding-left: 5px;
