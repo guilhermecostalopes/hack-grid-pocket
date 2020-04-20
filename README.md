@@ -1,27 +1,67 @@
-# HackGridPocket
+# Hacka Gr1d - Pocket
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+## Desafio
 
-## Development server
+Nesse mundo cada vez mais dinâmico e aberto, o desafio do **Hacka Gr1d** é buscar novas soluções para apoiar as corretoras de seguros a fazerem sua transformação digital utilizando os diferentes serviços que a Plataforma de Negócios oferece.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+E para encarar esse desafio você não estará sozinho! Além de seu time, mentores experts no assunto (feras em negócios, tecnologia e seguros!) darão todo o suporte para que vocês consigam colocar as suas ideias em prática e construir um protótipo vencedor! Vocês terão 36 horas seguidas para criar e apresentar um projeto inovador que não apenas solucione o problema proposto, mas também que conquiste os jurados e o grande prêmio do **Hacka Gr1d** !
 
-## Code scaffolding
+## REALIZAÇÃO
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://shawee.io/
 
-## Build
+## ORGANIZAÇÃO
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+https://insurance.gr1d.io/
 
-## Running unit tests
+## Sistema: Let's Travel
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+É uma plataforma que conecta os corretores com os futuros viajantes e pessoas que não entendem o valor do seguro em viagens, mas querem planejar bem  sua viagem internacional de forma fácil e agradável.
 
-## Running end-to-end tests
+# Frameworks
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Aplicação em Angular 9.
 
-## Further help
+## Principais Depedências:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1) Angular, ;
+2) Fullcalendar, ;
+3) Angular Material, ;
+4) ng2-charts, ;
+5) bootstrap, ;
+
+## Outros códigos fontes:
+
+Mobile - https://github.com/Vickout/HackaGr1d_Mobile
+
+backend - https://github.com/jorge-lba/gr1d
+
+## Publicação
+
+Utiilizamos o ```heroku``` para publicação de nosso app ```frontend```. Utilizando o endereço: https://letstravelviagens.herokuapp.com/#/authentication/login
+
+## Telas
+
+![Tela de Login](src/assets/images/sistema/login.png)
+
+![Tela de Registro](src/assets/images/sistema/registro.png)
+
+![Esqueceu a senha](src/assets/images/sistema/esqueceu_senha.png)
+
+
+![Calendário](src/assets/images/sistema/calendario.png)
+
+![Funil de venda](src/assets/images/sistema/funil_venda.png)
+
+![Mensagens](src/assets/images/sistema/mensagens.png)
+
+## Autor
+
+- [Guilherme Lopes](https://github.com/guilhermecostalopes)
+
+## Colaboradores
+
+- [Anne Cris](https://github.com/annecris)
+- [Addae do Carmo](https://github.com/addaedocarmo)
+- [Jorge Alegretti](https://github.com/jorge-lba)
+- [Victor Lourenço](https://github.com/Vickout)
