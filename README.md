@@ -42,6 +42,8 @@ backend - https://github.com/jorge-lba/gr1d
 
 https://www.youtube.com/watch?v=EoB7HqSt7j8&feature=youtu.be
 
+https://www.youtube.com/watch?v=gC39uByIqbM&feature=youtu.be
+
 ## Publicação
 
 Utiilizamos o ```heroku``` para publicação de nosso app ```frontend```. Utilizando o endereço: https://letstravelviagens.herokuapp.com/#/authentication/login
