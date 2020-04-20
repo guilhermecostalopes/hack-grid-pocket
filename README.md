@@ -36,6 +36,10 @@ Mobile - https://github.com/Vickout/HackaGr1d_Mobile
 
 backend - https://github.com/jorge-lba/gr1d
 
+## vídeo
+
+https://www.youtube.com/watch?v=EoB7HqSt7j8&feature=youtu.be
+
 ## Publicação
 
 Utiilizamos o ```heroku``` para publicação de nosso app ```frontend```. Utilizando o endereço: https://letstravelviagens.herokuapp.com/#/authentication/login
@@ -48,8 +52,15 @@ Utiilizamos o ```heroku``` para publicação de nosso app ```frontend```. Utiliz
 ![Tela de Registro](src/assets/images/sistema/registro.png)
 ### tela de esqueceu a senha
 ![Esqueceu a senha](src/assets/images/sistema/esqueceu_senha.png)
+### tela de dashboards
+![Dashboards](src/assets/images/sistema/dashboards.png)
 ### tela de calendário
-![Calendário](src/assets/images/sistema/calendario.png)
+### formato mês
+![Calendário mês](src/assets/images/sistema/calendario_mes.png)
+### formato semana
+![Calendário semana](src/assets/images/sistema/calendario_semana.png)
+### formato dia
+![Calendário dia](src/assets/images/sistema/calendario_dia.png)
 ### tela de funil de vendas
 ![Funil de venda](src/assets/images/sistema/funil_venda.png)
 ### tela de todas as mensagens do usuário logado
