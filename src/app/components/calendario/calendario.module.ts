@@ -17,9 +17,7 @@ import { CalendarioRoutes } from './calendario.routing';
     FlexLayoutModule,
     RouterModule.forChild(CalendarioRoutes),
     PerfectScrollbarModule,
-    //CalendarDateFormatter,
-    FullCalendarModule,
-    //CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
+    FullCalendarModule
   ],
   declarations: [ CalendarioComponent ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
