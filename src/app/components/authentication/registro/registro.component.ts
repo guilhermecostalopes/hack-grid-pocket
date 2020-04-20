@@ -26,6 +26,6 @@ export class RegistroComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.router.navigate( ['/dashboards'] );
+    this.router.navigate( ['/dashboards/mostrar'] );
   }
 }

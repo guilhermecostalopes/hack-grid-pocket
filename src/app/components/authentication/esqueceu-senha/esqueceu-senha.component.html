@@ -15,7 +15,7 @@
                             <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="text-danger support-text">Você deve incluir um endereço de email.</small>
                             <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="text-danger support-text">Você deve incluir um endereço de email</small>
                         </div>
-                        <button mat-raised-button color="primary" type="submit" class="btn-block btn-lg m-t-20" [disabled]="!form.valid">Enviar</button>
+                        <button mat-raised-button color="primary" type="submit" class="btn-block btn-lg m-t-20">Enviar</button>
                     </div>
                 </form>
             </mat-card-content>

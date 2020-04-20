@@ -70,6 +70,15 @@ Utiilizamos o ```heroku``` para publicação de nosso app ```frontend```. Utiliz
 ### tela de chat do usuário logado
 ![Chat](src/assets/images/sistema/chat.png)
 
+### Outras funcionalidades header e menu
+![Chat](src/assets/images/sistema/configuracoes_header_dois.png)
+
+![Chat](src/assets/images/sistema/configuracoes_header.png)
+
+![Chat](src/assets/images/sistema/mensagens_header.png)
+
+![Chat](src/assets/images/sistema/notificacoes_header.png)
+
 ## Autor
 
 - [Guilherme Lopes](https://github.com/guilhermecostalopes)
