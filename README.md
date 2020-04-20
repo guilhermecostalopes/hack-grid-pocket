@@ -24,11 +24,13 @@ Aplicação em Angular 9.
 
 ## Principais Depedências:
 
-1) Angular, ;
-2) Fullcalendar, ;
-3) Angular Material, ;
-4) ng2-charts, ;
-5) bootstrap, ;
+1) Angular;
+2) Fullcalendar;
+3) Angular Material;
+4) ng2-charts;
+5) bootstrap;
+
+Outros estão no arquivo **package.json**
 
 ## Outros códigos fontes:
 
