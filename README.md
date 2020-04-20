@@ -42,18 +42,22 @@ Utiilizamos o ```heroku``` para publicação de nosso app ```frontend```. Utiliz
 
 ## Telas
 
+### tela de Login
 ![Tela de Login](src/assets/images/sistema/login.png)
-
+### tela de registro
 ![Tela de Registro](src/assets/images/sistema/registro.png)
-
+### tela de esqueceu a senha
 ![Esqueceu a senha](src/assets/images/sistema/esqueceu_senha.png)
-
-
+### tela de calendário
 ![Calendário](src/assets/images/sistema/calendario.png)
-
+### tela de funil de vendas
 ![Funil de venda](src/assets/images/sistema/funil_venda.png)
-
+### tela de todas as mensagens do usuário logado
 ![Mensagens](src/assets/images/sistema/mensagens.png)
+### tela de todas as notificações do usuário logado
+![Notificações](src/assets/images/sistema/notificacoes.png)
+### tela de chat do usuário logado
+![Chat](src/assets/images/sistema/chat.png)
 
 ## Autor
 
